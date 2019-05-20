@@ -1,16 +1,11 @@
+RegularBalloon B; 
 void setup() {
   size(600, 600); 
-  
-  float xcor, ycor; 
-  xcor = 0;
-  ycor = 0; 
-  
-  fill(255, 0, 0); 
-  ellipseMode(CENTER); 
-  ellipse(xcor, ycor, 30, 35); 
-  triangle(xcor-10, ycor+25, xcor, ycor+17.5, xcor+10, ycor+25); 
-  
+  B = new RegularBalloon(1, 1, #ff0000, false, true); 
 }
 
 void draw() {
+  background(255); 
+  B.move(); 
+  B.display(); 
 }

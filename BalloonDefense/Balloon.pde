@@ -1,10 +1,11 @@
 abstract class Balloon {
-  private int xcor, ycor, lives, speed, hue; 
-  private boolean explode, pop, popped;
+  int xcor, ycor, direction, lives, speed, hue; 
+  boolean explode, pop, popped;
   
   Balloon(int l, int s, int c, boolean e, boolean p) {
     xcor = 0; 
     ycor = 0;
+    direction = 1; 
     lives = l;
     speed = s;
     hue = c; 
@@ -14,12 +15,8 @@ abstract class Balloon {
   }
   
   void display() {
-    if (hue == 1) {
-      fill(255, 0, 0); 
-    }
-    if (hue == 2) {
-      fill(0, 0, 0); 
-    }
+    fill(hue); 
+    
     if (!popped) {
       ellipseMode(CENTER); 
       ellipse(xcor, ycor, 30, 35); 
