@@ -1,11 +1,10 @@
 abstract class Balloon {
-  int xcor, ycor, direction, lives, speed, hue; 
+  int xcor, ycor, lives, speed, hue; 
   boolean explode, pop, popped;
   
   Balloon(int l, int s, int c, boolean e, boolean p) {
     xcor = 0; 
     ycor = 0;
-    direction = 1; 
     lives = l;
     speed = s;
     hue = c; 
