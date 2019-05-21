@@ -248,6 +248,53 @@ Tile[][] tiles = new Tile[10][10];
             tiles[i][j].setDir("left");
             tiles[i][j].setImage("sidestraight.jpg");
           }
+          
+          if(((i == 1 || i == 8) && j == 1)
+          || (i == 8 && j == 5)){
+            tiles[i][j].setDir("downturningright");
+            tiles[i][j].setImage("downrightcorner.jpg");
+          }
+          
+          if((i == 1 && j == 7)
+          || (i == 7 && j == 5)
+          || (i == 8 && j == 8)){
+            tiles[i][j].setDir("rightturningdown");
+            tiles[i][j].setImage("upleftcorner.jpg");
+            
+          }
+          
+          if((i == 5 && j == 7)){
+            tiles[i][j].setDir("downturningleft");
+            tiles[i][j].setImage("downleftcorner.jpg"); 
+          }
+          
+          if((i == 5 && j == 5)){
+            tiles[i][j].setDir("leftturningup");
+            tiles[i][j].setImage("downrightcorner.jpg");
+          }
+          
+          if(i == 3 && j == 5){
+            tiles[i][j].setDir("upturningleft");
+            tiles[i][j].setImage("upleftcorner.jpg");
+          }
+          
+          if(i == 3 && j == 1){
+            tiles[i][j].setDir("leftturningdown");
+            tiles[i][j].setImage("uprightcorner.jpg");
+          }
+           
+          if(i == 8 && j == 3){
+           tiles[i][j].setDir("leftturningup");
+           tiles[i][j].setImage("downleftcorner.jpg"); 
+          }
+          
+          if(i == 7 && j == 3){
+            tiles[i][j].setDir("upturningright");
+            tiles[i][j].setImage("uprightcorner.jpg"); 
+          }
+         
+          
+          
 
         }
       }
