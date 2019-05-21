@@ -3,7 +3,7 @@ abstract class Balloon {
   boolean explode, pop, popped;
   
   Balloon(int l, int s, int c, boolean e, boolean p) {
-    xcor = 0; 
+    xcor = 90; 
     ycor = 0;
     lives = l;
     speed = s;
@@ -24,11 +24,16 @@ abstract class Balloon {
   }
   
   Tile getTile(){
-    for(int i = 0; i < tiles.length; i++){
+    for(int i = 0; i < 2; i++){
      for(int j = 0; j < tiles[0].length; j++){
-        if(tiles[i][j].get) 
+       if(tiles[i][j].getX() <= xcor && xcor < tiles[i][j].getX() + 60
+       && tiles[i][j].getY() <= ycor && ycor < tiles[i][j].getY() + 60){
+         return tiles[i][j];   
+       }
      }
     }
+    Tile n = new Tile(0, 0, false, "up");
+    return n;
   }
 
   public abstract void move(); 

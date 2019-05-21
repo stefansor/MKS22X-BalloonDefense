@@ -10,7 +10,7 @@ class Tile{
        y = tl;
        towerable = tower;
        direction = dir;
-       img = loadImage("upstraight.jpg");
+       img = loadImage("notpath.jpg");
       }
       
       String getDir(){
@@ -32,9 +32,15 @@ class Tile{
       int getX(){
        return x; 
       }
+      void setX(int n){
+        x = n;
+      }
       
       int getY(){
        return y; 
+      }
+      void setY(int n){
+        y = n;
       }
       void setImage(String m){
        img = loadImage(m);  
