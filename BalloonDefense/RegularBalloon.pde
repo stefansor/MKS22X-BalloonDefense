@@ -5,33 +5,22 @@ class RegularBalloon extends Balloon {
   }
   
   void move() {
-    checkDirection(xcor, ycor); 
-    if (direction.equals(up)) {
-      ycor += speed; 
-      if (ycor >= 150) {
-        direction++;
-      }
-    }
-    if (direction == 2) {
-      xcor += speed; 
-      if (xcor >= 550) {
-        direction++;
-      }
-    }
-    if (direction == 3) {
-      ycor += speed; 
-      if (ycor >= 300) {
-        direction++;
-      }
-    }
-    if (direction == 4) {
-      xcor -= speed; 
-      if (xcor <= 300) {
-        direction++;
-      }
-    }
-    
     /*
+    String direction = getDir(xcor, ycor); //need something like getTile(xcor, ycor).getDir() 
+    if (direction.equals(up)) {
+      ycor -= speed; 
+    }
+    if (direction.equals(down)) {
+      ycor += speed; 
+    }
+    if (direction.equals(left)) {
+      xcor -= speed; 
+    }
+    if (direction.equals(right)) {
+      xcor += speed; 
+    }
+    */
+    
     if (direction == 1) {
       ycor += speed; 
       if (ycor >= 150) {
@@ -86,31 +75,7 @@ class RegularBalloon extends Balloon {
         popped = true; //need to find way to make number of main lives decrease
       }
     }
-    if (direction == 10) {
-      xcor += speed; 
-      if (xcor >= 500) {
-        direction++;
-      }
-    }
-    if (direction == 11) {
-      xcor += speed; 
-      if (xcor >= 500) {
-        direction++;
-      }
-    }
-    if (direction == 12) {
-      xcor += speed; 
-      if (xcor >= 500) {
-        direction++;
-      }
-    }
-    if (direction == 13) {
-      xcor += speed; 
-      if (xcor >= 500) {
-        direction++;
-      }
-    }
-    */ 
+
   }
   
   void loseLife() {
