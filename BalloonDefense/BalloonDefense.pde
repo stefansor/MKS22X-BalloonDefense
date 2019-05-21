@@ -1,22 +1,16 @@
-class balloonDefense{
-    private int mapwidth;
-    private int maplength;
-    
-    balloonDefense(int x, int y){
-      mapwidth = x;
-      maplength = y;
-    }
-    class tile{
-      private int tw;
-      private int tl;
+class Tile{
+      private int x;
+      private int y;
       private boolean towerable;
       private String direction;
+      private PImage img; 
       
-      tile(int x, int y, boolean tower, String dir){
-       tw = x;
-       tl = y;
+      Tile(int tw, int tl, boolean tower, String dir){
+       x = tw;
+       y = tl;
        towerable = tower;
        direction = dir;
+       img = loadImage("upstraight.jpg");
       }
       
       String getDir(){
@@ -42,47 +36,41 @@ class balloonDefense{
       int getLength(){
        return y; 
       }
-      
-      
-      
-      
+      void setImage(PImage m){
+       img = m;  
+      }
+      void display(){
+        image(img, x, y, 100, 100);
+        
+      }
     }
+
+class balloonDefense{
+    private int mapwidth;
+    private int maplength;    
+    
+    //preconditions: should both the length and width should be able to fit a whole number of 10 by 10 tiles 
+    
+    balloonDefense(int x, int y){
+      mapwidth = x;
+      maplength = y;
+    }
+      
+ }
   
-    void map(){
-       //construct 100 tiles and use for loop with mutator methods 
-    }
+Tile[][] tiles = new Tile[10][10];
   
     void setup(){
       size(1000, 1000);
-      balloonDefense a = new balloonDefense
+      Tile t = new Tile(0, 0, false, "up");
+      tiles[0][0] = t; 
     }
     
     
     void draw(){
       background(255);
-      map();
-      
-      
-      
+      tiles[0][0].display();
     }
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-}
+ 
