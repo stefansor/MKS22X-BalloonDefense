@@ -47,8 +47,14 @@ class RegularBalloon extends Balloon {
       ycor -= speed; 
     }
     if (direction.equals("rightturningdown")) {
-      xcor += speed; 
-      ycor += speed; 
+      if (xcor % 60 < 30) {
+        xcor += speed; 
+      }
+      else {
+        ycor += speed; 
+      }
+      //ycor += speed; 
+      //xcor += speed; 
     }
     
   }
