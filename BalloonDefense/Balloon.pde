@@ -26,8 +26,8 @@ abstract class Balloon {
   Tile getTile(){
     for(int i = 0; i < 2; i++){
      for(int j = 0; j < tiles[0].length; j++){
-       if(tiles[i][j].getX() <= xcor && xcor < tiles[i][j].getX() + 60
-       && tiles[i][j].getY() <= ycor && ycor < tiles[i][j].getY() + 60){
+       if(tiles[i][j].getX() <= xcor && xcor <= tiles[i][j].getX() + 60
+       && tiles[i][j].getY() <= ycor && ycor <= tiles[i][j].getY() + 60){
          return tiles[i][j];   
        }
      }

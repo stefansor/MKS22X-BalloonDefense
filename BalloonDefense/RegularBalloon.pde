@@ -22,25 +22,34 @@ class RegularBalloon extends Balloon {
       xcor -= speed; 
       ycor -= speed; 
     }
+    if (direction.equals("upturningright")) {
+      xcor += speed; 
+      ycor -= speed; 
+    }
+    if (direction.equals("downturningleft")) {
+      xcor -= speed; 
+      ycor += speed; 
+    }
     if (direction.equals("downturningright")) {
       xcor += speed; 
       ycor += speed; 
     }
-    if (direction.equals("upturningright")) {
+    if (direction.equals("leftturningdown")) {
+      xcor -= speed; 
+      ycor += speed; 
+    }
+    if (direction.equals("leftturningup")) {
+      xcor -= speed; 
+      ycor -= speed; 
+    }
+    if (direction.equals("rightturningup")) {
+      xcor += speed; 
+      ycor -= speed; 
+    }
+    if (direction.equals("rightturningdown")) {
       xcor += speed; 
       ycor += speed; 
     }
-    //directions that sill need to be added 
-    /*
-    upturningleft - 
-    upturningright 
-    downturningleft
-    downturningright - 
-    leftturningdown
-    leftturningup
-    rightturningdown
-    rightturningup
-    */
     
   }
   
