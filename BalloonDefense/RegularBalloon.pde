@@ -5,22 +5,19 @@ class RegularBalloon extends Balloon {
   }
   
   void move() {
-    xcor += speed; 
-    /*
-    String direction = getTile(xcor, ycor).getDir();  
-    if (direction.equals(up)) {
+    String direction = getTile().getDir();  
+    if (direction.equals("up")) {
       ycor -= speed; 
     }
-    if (direction.equals(down)) {
+    if (direction.equals("down")) {
       ycor += speed; 
     }
-    if (direction.equals(left)) {
+    if (direction.equals("left")) {
       xcor -= speed; 
     }
-    if (direction.equals(right)) {
+    if (direction.equals("right")) {
       xcor += speed; 
     }
-    */
   }
   
   void loseLife() {
