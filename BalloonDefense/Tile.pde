@@ -1,6 +1,6 @@
 class Tile{
-      private int x;
-      private int y;
+      private int x, w;
+      private int y, h;
       private boolean towerable;
       private String direction;
       private PImage img; 
@@ -8,9 +8,19 @@ class Tile{
       Tile(int tw, int tl, boolean tower, String dir){
        x = tw;
        y = tl;
+       h = 60;
+       w = 60;
        towerable = tower;
        direction = dir;
        img = loadImage("notpath.jpg");
+      }
+      
+      int getHeight(){
+       return h; 
+      }
+      
+      int getWidth(){
+       return w;  
       }
       
       String getDir(){

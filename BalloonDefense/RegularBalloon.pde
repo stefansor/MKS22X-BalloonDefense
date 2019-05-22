@@ -19,6 +19,7 @@ class RegularBalloon extends Balloon {
       xcor += speed; 
     }
     //directions that sill need to be added 
+    
     /*
     upturningleft 
     upturningright 
