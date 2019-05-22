@@ -18,12 +18,24 @@ class RegularBalloon extends Balloon {
     if (direction.equals("right")) {
       xcor += speed; 
     }
+    if (direction.equals("upturningleft")) {
+      xcor -= speed; 
+      ycor -= speed; 
+    }
+    if (direction.equals("downturningright")) {
+      xcor += speed; 
+      ycor += speed; 
+    }
+    if (direction.equals("upturningright")) {
+      xcor += speed; 
+      ycor += speed; 
+    }
     //directions that sill need to be added 
     /*
-    upturningleft 
+    upturningleft - 
     upturningright 
     downturningleft
-    downturningright 
+    downturningright - 
     leftturningdown
     leftturningup
     rightturningdown
