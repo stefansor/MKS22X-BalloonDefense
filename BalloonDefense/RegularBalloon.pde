@@ -19,32 +19,60 @@ class RegularBalloon extends Balloon {
       xcor += speed; 
     }
     if (direction.equals("upturningleft")) {
-      xcor -= speed; 
-      ycor -= speed; 
+      if (ycor % 60 < 30) {
+        ycor -= speed; 
+      }
+      else {
+        xcor -= speed; 
+      }
     }
     if (direction.equals("upturningright")) {
-      xcor += speed; 
-      ycor -= speed; 
+      if (ycor % 60 < 30) {
+        ycor -= speed; 
+      }
+      else {
+        xcor += speed; 
+      }
     }
     if (direction.equals("downturningleft")) {
-      xcor -= speed; 
-      ycor += speed; 
+      if (ycor % 60 < 30) {
+        ycor -= speed; 
+      }
+      else {
+        xcor += speed; 
+      }
     }
     if (direction.equals("downturningright")) {
-      xcor += speed; 
-      ycor += speed; 
+      if (ycor % 60 < 30) {
+        ycor += speed; 
+      }
+      else {
+        xcor += speed; 
+      }
     }
     if (direction.equals("leftturningdown")) {
-      xcor -= speed; 
-      ycor += speed; 
+      if (xcor % 60 < 30) {
+        xcor -= speed; 
+      }
+      else {
+        ycor += speed; 
+      }
     }
     if (direction.equals("leftturningup")) {
-      xcor -= speed; 
-      ycor -= speed; 
+      if (xcor % 60 < 30) {
+        xcor -= speed; 
+      }
+      else {
+        ycor -= speed; 
+      }
     }
     if (direction.equals("rightturningup")) {
-      xcor += speed; 
-      ycor -= speed; 
+      if (xcor % 60 < 30) {
+        xcor += speed; 
+      }
+      else {
+        ycor -= speed; 
+      }
     }
     if (direction.equals("rightturningdown")) {
       if (xcor % 60 < 30) {
@@ -53,8 +81,6 @@ class RegularBalloon extends Balloon {
       else {
         ycor += speed; 
       }
-      //ycor += speed; 
-      //xcor += speed; 
     }
     
   }

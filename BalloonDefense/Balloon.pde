@@ -35,7 +35,87 @@ abstract class Balloon {
     Tile n = new Tile(0, 0, false, "up");
     return n;
   }
+  
+    void move() {    
+    String direction = getTile().getDir();  
+    if (direction.equals("up")) {
+      ycor -= speed; 
+    }
+    if (direction.equals("down")) {
+      ycor += speed; 
+    }
+    if (direction.equals("left")) {
+      xcor -= speed; 
+    }
+    if (direction.equals("right")) {
+      xcor += speed; 
+    }
+    if (direction.equals("upturningleft")) {
+      if (ycor % 60 < 30) {
+        ycor -= speed; 
+      }
+      else {
+        xcor -= speed; 
+      }
+    }
+    if (direction.equals("upturningright")) {
+      if (ycor % 60 < 30) {
+        ycor -= speed; 
+      }
+      else {
+        xcor += speed; 
+      }
+    }
+    if (direction.equals("downturningleft")) {
+      if (ycor % 60 < 30) {
+        ycor -= speed; 
+      }
+      else {
+        xcor += speed; 
+      }
+    }
+    if (direction.equals("downturningright")) {
+      if (ycor % 60 < 30) {
+        ycor += speed; 
+      }
+      else {
+        xcor += speed; 
+      }
+    }
+    if (direction.equals("leftturningdown")) {
+      if (xcor % 60 < 30) {
+        xcor -= speed; 
+      }
+      else {
+        ycor += speed; 
+      }
+    }
+    if (direction.equals("leftturningup")) {
+      if (xcor % 60 < 30) {
+        xcor -= speed; 
+      }
+      else {
+        ycor -= speed; 
+      }
+    }
+    if (direction.equals("rightturningup")) {
+      if (xcor % 60 < 30) {
+        xcor += speed; 
+      }
+      else {
+        ycor -= speed; 
+      }
+    }
+    if (direction.equals("rightturningdown")) {
+      if (xcor % 60 < 30) {
+        xcor += speed; 
+      }
+      else {
+        ycor += speed; 
+      }
+    }
+    
+  }
 
-  public abstract void move(); 
   public abstract void loseLife(); 
 }
