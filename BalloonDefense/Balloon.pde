@@ -18,13 +18,13 @@ abstract class Balloon {
     
     if (!popped) {
       ellipseMode(CENTER); 
-      ellipse(xcor, ycor, 30, 35); 
-      triangle(xcor-10, ycor+25, xcor, ycor+17.5, xcor+10, ycor+25); 
+      ellipse(xcor, ycor, 25, 30); 
+      triangle(xcor-10, ycor+20, xcor, ycor+15, xcor+10, ycor+20); 
     }
   }
   
   Tile getTile(){
-    for(int i = 0; i < 10; i++){
+    for(int i = 0; i < tiles.length ; i++){
      for(int j = 0; j < tiles[0].length; j++){
        if(tiles[i][j].getX() <= xcor && xcor < tiles[i][j].getX() + 60
        && tiles[i][j].getY() <= ycor && ycor < tiles[i][j].getY() + 60){

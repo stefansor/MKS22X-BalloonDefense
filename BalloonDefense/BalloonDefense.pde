@@ -1,17 +1,9 @@
-
-class balloonDefense{
-    private int mapwidth;
-    private int maplength;    
-        
-    balloonDefense(int x, int y){
-      mapwidth = x;
-      maplength = y;
-    }
-      
- }
-
-RegularBalloon r = new RegularBalloon(1, 2, 153, false, true);
+ArrayList<RegularBalloon> RegBalloons = new ArrayList<RegularBalloon>(); 
+int counter = 0; 
 Tile[][] tiles = new Tile[10][10];
+
+int coins = 200;
+//RegularBalloon r = new RegularBalloon(1, 2, 153, false, true);
   
     void setup(){
       size(750, 600);
@@ -107,27 +99,30 @@ Tile[][] tiles = new Tile[10][10];
     
     void draw(){
       background(255);
-      /*for(int i = 0; i < tiles[0].length; i++){
-         if(i != 1){
-           tiles[0][i].setImage("notpath.jpg");
-         }
-         tiles[0][i].display(); 
-      }
-      for(int i = 0; i < tiles[0].length; i++){
-         if(i != 1){
-           tiles[1][i].setImage("notpath.jpg");
-         }
-         tiles[1][i].display(); 
-      }*/
+      
       for(int i = 0; i < tiles.length; i++){
         for(int j = 0; j < tiles[0].length; j++){
          tiles[i][j].display(); 
         }
       }
+      
+      counter++; 
+      if (counter%50 == 0 && counter < 5000) {
+        RegularBalloon b = new RegularBalloon(1, 1, #ff0000, false, true);
+        RegBalloons.add(b);  
+      }
+      
+       for (RegularBalloon rb : RegBalloons) {
+         rb.move(); 
+         rb.display(); 
+       }
+      
+      /*
       r.display();
       r.move();
       print(r.xcor); 
       println(r.ycor); 
+      */
     }
   
   
