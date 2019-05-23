@@ -10,7 +10,7 @@ class balloonDefense{
       
  }
 
-RegularBalloon r = new RegularBalloon(1, 1, 153, false, true);
+RegularBalloon r = new RegularBalloon(1, 2, 153, false, true);
 Tile[][] tiles = new Tile[10][10];
   
     void setup(){
@@ -35,31 +35,31 @@ Tile[][] tiles = new Tile[10][10];
             tiles[i][j].setImage("upstraight.jpg");
           }
           
-          if(j == 5 && i == 4){
+          else if(j == 5 && i == 4){
            tiles[i][j].setDir("up");
            tiles[i][j].setImage("upstraight.jpg");
           }
           
-          if((i == 1 && (1 < j && j < 7))
+          else if((i == 1 && (1 < j && j < 7))
           || (i == 7 && j == 4)
           || (i == 8 && (j == 2 || (5 < j && j < 8)))){
             tiles[i][j].setDir("right");
             tiles[i][j].setImage("sidestraight.jpg");
             
           }
-          if((i == 3 && (1 < j && j < 5))
+          else if((i == 3 && (1 < j && j < 5))
           || (i == 5 && j == 6)){
             tiles[i][j].setDir("left");
             tiles[i][j].setImage("sidestraight.jpg");
           }
           
-          if(((i == 1 || i == 8) && j == 1)
+          else if(((i == 1 || i == 8) && j == 1)
           || (i == 8 && j == 5)){
             tiles[i][j].setDir("downturningright");
             tiles[i][j].setImage("downrightcorner.jpg");
           }
           
-          if((i == 1 && j == 7)
+          else if((i == 1 && j == 7)
           || (i == 7 && j == 5)
           || (i == 8 && j == 8)){
             tiles[i][j].setDir("rightturningdown");
@@ -67,41 +67,41 @@ Tile[][] tiles = new Tile[10][10];
             
           }
           
-          if((i == 5 && j == 7)){
+          else if((i == 5 && j == 7)){
             tiles[i][j].setDir("downturningleft");
             tiles[i][j].setImage("downleftcorner.jpg"); 
           }
           
-          if((i == 5 && j == 5)){
+          else if((i == 5 && j == 5)){
             tiles[i][j].setDir("leftturningup");
             tiles[i][j].setImage("downrightcorner.jpg");
           }
           
-          if(i == 3 && j == 5){
+          else if(i == 3 && j == 5){
             tiles[i][j].setDir("upturningleft");
             tiles[i][j].setImage("upleftcorner.jpg");
           }
           
-          if(i == 3 && j == 1){
+          else if(i == 3 && j == 1){
             tiles[i][j].setDir("leftturningdown");
             tiles[i][j].setImage("uprightcorner.jpg");
           }
            
-          if(i == 8 && j == 3){
+          else if(i == 8 && j == 3){
            tiles[i][j].setDir("leftturningup");
            tiles[i][j].setImage("downleftcorner.jpg"); 
           }
           
-          if(i == 7 && j == 3){
+          else if(i == 7 && j == 3){
             tiles[i][j].setDir("upturningright");
             tiles[i][j].setImage("uprightcorner.jpg"); 
           }
-         
-          
-          
-
         }
       }
+      
+      //tiles[1][1] = new Tile(0, 0, false, "blank"); 
+      print(tiles[2][7].getDir()); 
+      
     }
     
     
@@ -126,6 +126,8 @@ Tile[][] tiles = new Tile[10][10];
       }
       r.display();
       r.move();
+      print(r.xcor); 
+      println(r.ycor); 
     }
   
   
