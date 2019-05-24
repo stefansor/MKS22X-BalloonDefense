@@ -15,9 +15,8 @@ abstract class Balloon {
   }
   
   void display() {
-    fill(hue); 
-    
     if (!popped) {
+      fill(hue); 
       ellipseMode(CENTER); 
       ellipse(xcor, ycor, 25, 30); 
       triangle(xcor-10, ycor+20, xcor, ycor+15, xcor+10, ycor+20); 
@@ -42,87 +41,87 @@ abstract class Balloon {
   }
   
   void move() {    
-    if (getTile().getX() == end.getX() && getTile().getY() == end.getY()) {
+    if (popped || getTile().equals(end)) {
       popped = true; 
     }
     else {
-    String direction = getTile().getDir();  
-    if (direction.equals("up")) {
-      ycor -= speed; 
-    }
-    if (direction.equals("down")) {
-      ycor += speed; 
-    }
-    if (direction.equals("left")) {
-      xcor -= speed; 
-    }
-    if (direction.equals("right")) {
-      xcor += speed; 
-    }
-    if (direction.equals("upturningleft")) {
-      if (ycor % 60 < 30) {
+      String direction = getTile().getDir(); 
+      if (direction.equals("up")) {
         ycor -= speed; 
       }
-      else {
+      if (direction.equals("down")) {
+        ycor += speed; 
+      } 
+      if (direction.equals("left")) {
         xcor -= speed; 
       }
-    }
-    if (direction.equals("upturningright")) {
-      if (ycor % 60 < 30) {
-        ycor -= speed; 
-      }
-      else {
+      if (direction.equals("right")) {
         xcor += speed; 
       }
-    }
-    if (direction.equals("downturningleft")) {
-      if (ycor % 60 < 30) {
-        ycor -= speed; 
+      if (direction.equals("upturningleft")) {
+        if (ycor % 60 > 30) {
+          ycor -= speed; 
+        }
+        else {
+          xcor -= speed; 
+        }
       }
-      else {
-        xcor += speed; 
+      if (direction.equals("upturningright")) {
+        if (ycor % 60 > 30) {
+          ycor -= speed; 
+        }
+        else {
+          xcor += speed; 
+        }
       }
-    }
-    if (direction.equals("downturningright")) {
-      if (ycor % 60 < 30) {
-        ycor += speed; 
+      if (direction.equals("downturningleft")) {
+        if (ycor % 60 < 30) {
+          ycor += speed; 
+        }
+        else {
+          xcor -= speed; 
+        }
       }
-      else {
-        xcor += speed; 
+      if (direction.equals("downturningright")) {
+        if (ycor % 60 < 30) {
+          ycor += speed; 
+        }
+        else {
+          xcor += speed; 
+        }
       }
-    }
-    if (direction.equals("leftturningdown")) {
-      if (xcor % 60 < 30) {
-        xcor -= speed; 
+      if (direction.equals("leftturningdown")) {
+        if (xcor % 60 > 30) {
+          xcor -= speed; 
+        }
+        else {
+          ycor += speed; 
+        }
+      } 
+      if (direction.equals("leftturningup")) {
+        if (xcor % 60 > 30) {
+          xcor -= speed; 
+        }
+        else {
+          ycor -= speed; 
+        }
       }
-      else {
-        ycor += speed; 
+      if (direction.equals("rightturningup")) {
+        if (xcor % 60 < 30) {
+          xcor += speed; 
+        }
+        else {
+          ycor -= speed; 
+        }
       }
-    }
-    if (direction.equals("leftturningup")) {
-      if (xcor % 60 < 30) {
-        xcor -= speed; 
+      if (direction.equals("rightturningdown")) {
+        if (xcor % 60 < 30) {
+          xcor += speed; 
+        }
+        else {
+          ycor += speed; 
+        }
       }
-      else {
-        ycor -= speed; 
-      }
-    }
-    if (direction.equals("rightturningup")) {
-      if (xcor % 60 < 30) {
-        xcor += speed; 
-      }
-      else {
-        ycor -= speed; 
-      }
-    }
-    if (direction.equals("rightturningdown")) {
-      if (xcor % 60 < 30) {
-        xcor += speed; 
-      }
-      else {
-        ycor += speed; 
-      }
-    }
     }
   }
 

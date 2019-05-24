@@ -6,7 +6,7 @@ int coins = 200;
 RegularBalloon r = new RegularBalloon(1, 5, 153, false, true);
   
     void setup(){
-      size(750, 600);
+      size(900, 600);
       
       for (int r = 0; r < 10; r++) {
         for (int c = 0; c < 10; c++) {
@@ -92,6 +92,7 @@ RegularBalloon r = new RegularBalloon(1, 5, 153, false, true);
           }       
         }
       }
+      
       r.setEnd(tiles[9][8]); 
       //tiles[1][1] = new Tile(0, 0, false, "blank"); 
       println(tiles[9][8].getDir()); 
@@ -100,7 +101,12 @@ RegularBalloon r = new RegularBalloon(1, 5, 153, false, true);
     
     
     void draw(){
-      background(255);
+      fill(255,235,205); 
+      rect(540, 0, 460, 900);
+      fill(0, 0, 0); 
+      textSize(32); 
+      String money = "Coins: " + coins; 
+      text(money, 560, 100);
       
       for(int i = 0; i < tiles.length; i++){
         for(int j = 0; j < tiles[0].length; j++){
