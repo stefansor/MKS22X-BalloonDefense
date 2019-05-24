@@ -4,6 +4,7 @@ class Tile{
       private boolean towerable;
       private String direction;
       private PImage img; 
+      private ArrayList<Tool> stuff;
       
       Tile(int tw, int tl, boolean tower, String dir){
        x = tw;
@@ -11,6 +12,7 @@ class Tile{
        towerable = tower;
        direction = dir;
        img = loadImage("notpath.jpg");
+       stuff = new ArrayList<Tool>();
       }
       
       String getDir(){

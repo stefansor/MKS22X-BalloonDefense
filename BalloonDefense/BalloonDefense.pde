@@ -1,12 +1,11 @@
 ArrayList<RegularBalloon> RegBalloons = new ArrayList<RegularBalloon>(); 
 int counter = 0; 
 Tile[][] tiles = new Tile[10][10];
+ArrayList<Tool> tools = new ArrayList<Tool>();
 
 int coins = 200;
 RegularBalloon r = new RegularBalloon(1, 5, 153, false, true);
-Tack tac = new Tack(100, 100);
-
-
+Tool tac;
     void setup(){
       size(750, 600);
       
@@ -97,7 +96,9 @@ Tack tac = new Tack(100, 100);
       r.setEnd(tiles[9][8]); 
       //tiles[1][1] = new Tile(0, 0, false, "blank"); 
       println(tiles[9][8].getDir()); 
-      println(tiles[7][3].getDir());   
+      println(tiles[7][3].getDir()); 
+      tac = new Tack(80, 30);
+      tools.add(tac);
     }
     
     
@@ -122,6 +123,11 @@ Tack tac = new Tack(100, 100);
        }
       */
       ///*
+      for(Tool t : tools){
+       ///add the tool to the tile  
+        
+        
+      }
       r.display();
       r.move();
       print(r.xcor); 
