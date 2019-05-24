@@ -3,7 +3,7 @@ int counter = 0;
 Tile[][] tiles = new Tile[10][10];
 
 int coins = 200;
-//RegularBalloon r = new RegularBalloon(1, 2, 153, false, true);
+RegularBalloon r = new RegularBalloon(1, 10, 153, false, true);
   
     void setup(){
       size(750, 600);
@@ -51,17 +51,17 @@ int coins = 200;
             tiles[i][j].setImage("downrightcorner.jpg");
           }
           
+          else if((i == 5 && j == 7)){
+            tiles[i][j].setDir("downturningleft");
+            tiles[i][j].setImage("downleftcorner.jpg"); 
+          }
+          
           else if((i == 1 && j == 7)
           || (i == 7 && j == 5)
           || (i == 8 && j == 8)){
             tiles[i][j].setDir("rightturningdown");
             tiles[i][j].setImage("upleftcorner.jpg");
             
-          }
-          
-          else if((i == 5 && j == 7)){
-            tiles[i][j].setDir("downturningleft");
-            tiles[i][j].setImage("downleftcorner.jpg"); 
           }
           
           else if((i == 5 && j == 5)){
@@ -80,7 +80,7 @@ int coins = 200;
           }
            
           else if(i == 8 && j == 3){
-           tiles[i][j].setDir("leftturningup");
+           tiles[i][j].setDir("rightturningup");
            tiles[i][j].setImage("downleftcorner.jpg"); 
           }
           
@@ -92,8 +92,8 @@ int coins = 200;
       }
       
       //tiles[1][1] = new Tile(0, 0, false, "blank"); 
-      print(tiles[2][7].getDir()); 
-      
+      println(tiles[8][3].getDir()); 
+      println(tiles[8][4].getDir());   
     }
     
     
@@ -105,10 +105,10 @@ int coins = 200;
          tiles[i][j].display(); 
         }
       }
-      
+      /*
       counter++; 
       if (counter%50 == 0 && counter < 5000) {
-        RegularBalloon b = new RegularBalloon(1, 1, #ff0000, false, true);
+        RegularBalloon b = new RegularBalloon(1, 2, #ff0000, false, true);
         RegBalloons.add(b);  
       }
       
@@ -116,13 +116,13 @@ int coins = 200;
          rb.move(); 
          rb.display(); 
        }
-      
-      /*
+      */
+      ///*
       r.display();
       r.move();
       print(r.xcor); 
       println(r.ycor); 
-      */
+      //*/
     }
   
   
