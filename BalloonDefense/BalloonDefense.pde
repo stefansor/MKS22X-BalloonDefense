@@ -3,7 +3,7 @@ int counter = 0;
 Tile[][] tiles = new Tile[10][10];
 
 int coins = 200;
-RegularBalloon r = new RegularBalloon(1, 10, 153, false, true);
+RegularBalloon r = new RegularBalloon(1, 5, 153, false, true);
   
     void setup(){
       size(750, 600);
@@ -64,9 +64,20 @@ RegularBalloon r = new RegularBalloon(1, 10, 153, false, true);
             
           }
           
+          else if(i == 8 && j == 3){
+           tiles[i][j].setDir("rightturningup");
+           tiles[i][j].setImage("downleftcorner.jpg"); 
+          }
+          
           else if((i == 5 && j == 5)){
             tiles[i][j].setDir("leftturningup");
             tiles[i][j].setImage("downrightcorner.jpg");
+          }
+          
+          
+          else if(i == 3 && j == 1){
+            tiles[i][j].setDir("leftturningdown");
+            tiles[i][j].setImage("uprightcorner.jpg");
           }
           
           else if(i == 3 && j == 5){
@@ -74,26 +85,17 @@ RegularBalloon r = new RegularBalloon(1, 10, 153, false, true);
             tiles[i][j].setImage("upleftcorner.jpg");
           }
           
-          else if(i == 3 && j == 1){
-            tiles[i][j].setDir("leftturningdown");
-            tiles[i][j].setImage("uprightcorner.jpg");
-          }
-           
-          else if(i == 8 && j == 3){
-           tiles[i][j].setDir("rightturningup");
-           tiles[i][j].setImage("downleftcorner.jpg"); 
-          }
           
           else if(i == 7 && j == 3){
             tiles[i][j].setDir("upturningright");
             tiles[i][j].setImage("uprightcorner.jpg"); 
-          }
+          }       
         }
       }
       
       //tiles[1][1] = new Tile(0, 0, false, "blank"); 
       println(tiles[8][3].getDir()); 
-      println(tiles[8][4].getDir());   
+      println(tiles[7][3].getDir());   
     }
     
     

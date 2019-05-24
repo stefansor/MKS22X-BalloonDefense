@@ -19,7 +19,7 @@ class RegularBalloon extends Balloon {
       xcor += speed; 
     }
     if (direction.equals("upturningleft")) {
-      if (ycor % 60 < 30) {
+      if (ycor % 60 > 30) {
         ycor -= speed; 
       }
       else {
@@ -27,7 +27,7 @@ class RegularBalloon extends Balloon {
       }
     }
     if (direction.equals("upturningright")) {
-      if (ycor % 60 < 30) {
+      if (ycor % 60 > 30) {
         ycor -= speed; 
       }
       else {
@@ -51,7 +51,7 @@ class RegularBalloon extends Balloon {
       }
     }
     if (direction.equals("leftturningdown")) {
-      if (xcor % 60 < 30) {
+      if (xcor % 60 > 30) {
         xcor -= speed; 
       }
       else {
@@ -59,7 +59,7 @@ class RegularBalloon extends Balloon {
       }
     }
     if (direction.equals("leftturningup")) {
-      if (xcor % 60 < 30) {
+      if (xcor % 60 > 30) {
         xcor -= speed; 
       }
       else {
