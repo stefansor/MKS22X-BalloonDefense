@@ -1,6 +1,7 @@
 abstract class Balloon {
   int xcor, ycor, lives, speed, hue; 
   boolean explode, pop, popped;
+  Tile end; 
   
   Balloon(int l, int s, int c, boolean e, boolean p) {
     xcor = 90; 
@@ -36,7 +37,15 @@ abstract class Balloon {
     return n;
   }
   
-    void move() {    
+  void setEnd(Tile e) {
+    end = e; 
+  }
+  
+  void move() {    
+    if (getTile().getX() == end.getX() && getTile().getY() == end.getY()) {
+      popped = true; 
+    }
+    else {
     String direction = getTile().getDir();  
     if (direction.equals("up")) {
       ycor -= speed; 
@@ -114,7 +123,7 @@ abstract class Balloon {
         ycor += speed; 
       }
     }
-    
+    }
   }
 
   public abstract void loseLife(); 

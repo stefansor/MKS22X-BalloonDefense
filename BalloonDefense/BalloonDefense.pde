@@ -92,9 +92,9 @@ RegularBalloon r = new RegularBalloon(1, 5, 153, false, true);
           }       
         }
       }
-      
+      r.setEnd(tiles[9][8]); 
       //tiles[1][1] = new Tile(0, 0, false, "blank"); 
-      println(tiles[8][3].getDir()); 
+      println(tiles[9][8].getDir()); 
       println(tiles[7][3].getDir());   
     }
     
