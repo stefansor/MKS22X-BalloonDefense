@@ -4,7 +4,9 @@ Tile[][] tiles = new Tile[10][10];
 
 int coins = 200;
 RegularBalloon r = new RegularBalloon(1, 5, 153, false, true);
-  
+Tack tac = new Tack(100, 100);
+
+
     void setup(){
       size(750, 600);
       
@@ -124,6 +126,7 @@ RegularBalloon r = new RegularBalloon(1, 5, 153, false, true);
       r.move();
       print(r.xcor); 
       println(r.ycor); 
+      tac.display();
       //*/
     }
   
