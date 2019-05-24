@@ -9,3 +9,6 @@ Balloon Tower Defense
 5/21/2019
   Vivien: During the first half of class, Stefan and I talked about how we could set up the map and write a getTile to identify which tile the balloon is on. Then, I started to work on displaying coins and adding tools. I wrote the abstract class Tools and am in the process of writing Tack. I also experimented a little with Stefan's code. Tomorrow, we need to merge the tiles with master and make sure RegularBalloons works on the map. Oncce we confirm that, we can focus on completing the additional displays and Tack.   
   Stefan: At home I wrote getTile and finished the map design. I integrated some of Vivien's code to see how the balloon will start to interact with the tiles and if the getTile works. I also started to write the move function and will finish later tomorrow. 
+
+5/23/2019
+  Vivien: I worked on completing move so that it smoothly manuvers balloons around corners. I also tried to experiment and find ways to record the last tile to stop the balloon movement. Other than adding an if statement to move to stop balloons at the end, Balloons and RegularBalloons seem complete. 
