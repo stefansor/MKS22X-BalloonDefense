@@ -99,6 +99,12 @@ RegularBalloon r = new RegularBalloon(1, 5, 153, false, true);
       println(tiles[7][3].getDir());   
     }
     
+    void update() {
+      //if mouse pressed and dragged, add tool to list
+      //coins changes
+      
+      
+    }
     
     void draw(){
       fill(255,235,205); 
@@ -106,25 +112,26 @@ RegularBalloon r = new RegularBalloon(1, 5, 153, false, true);
       fill(0, 0, 0); 
       textSize(32); 
       String money = "Coins: " + coins; 
-      text(money, 560, 100);
+      text(money, 650, 100);
       
       for(int i = 0; i < tiles.length; i++){
         for(int j = 0; j < tiles[0].length; j++){
          tiles[i][j].display(); 
         }
       }
-      /*
+      
       counter++; 
       if (counter%50 == 0 && counter < 5000) {
         RegularBalloon b = new RegularBalloon(1, 2, #ff0000, false, true);
         RegBalloons.add(b);  
       }
       
-       for (RegularBalloon rb : RegBalloons) {
-         rb.move(); 
-         rb.display(); 
+      for (RegularBalloon rb : RegBalloons) {
+        update(); 
+        rb.move(); 
+        rb.display(); 
        }
-      */
+      
       ///*
       r.display();
       r.move();
