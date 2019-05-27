@@ -4,7 +4,7 @@ Tile[][] tiles = new Tile[10][10];
 ArrayList<Tool> tools = new ArrayList<Tool>();
 
 int coins = 200;
-RegularBalloon r = new RegularBalloon(1, 5, 153, false, true);
+RegularBalloon r = new RegularBalloon(1, 6, 153, false, true);
 Tool tac;
     void setup(){
       size(750, 600);
@@ -124,15 +124,14 @@ Tool tac;
       */
       ///*
       for(Tool t : tools){
-       ///add the tool to the tile  
-        
-        
+        t.getTile().addTool(t);
+        t.display();
       }
+      r.update();
       r.display();
       r.move();
       print(r.xcor); 
       println(r.ycor); 
-      tac.display();
       //*/
     }
   

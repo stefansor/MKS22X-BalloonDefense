@@ -42,10 +42,6 @@ abstract class Balloon {
   }
   
   void move() {    
-    if (getTile().getX() == end.getX() && getTile().getY() == end.getY()) {
-      popped = true; 
-    }
-    else {
     String direction = getTile().getDir();  
     if (direction.equals("up")) {
       ycor -= speed; 
@@ -60,7 +56,7 @@ abstract class Balloon {
       xcor += speed; 
     }
     if (direction.equals("upturningleft")) {
-      if (ycor % 60 < 30) {
+      if (ycor % 60 > 30) {
         ycor -= speed; 
       }
       else {
@@ -68,7 +64,7 @@ abstract class Balloon {
       }
     }
     if (direction.equals("upturningright")) {
-      if (ycor % 60 < 30) {
+      if (ycor % 60 > 30) {
         ycor -= speed; 
       }
       else {
@@ -77,10 +73,10 @@ abstract class Balloon {
     }
     if (direction.equals("downturningleft")) {
       if (ycor % 60 < 30) {
-        ycor -= speed; 
+        ycor += speed; 
       }
       else {
-        xcor += speed; 
+        xcor -= speed; 
       }
     }
     if (direction.equals("downturningright")) {
@@ -92,7 +88,7 @@ abstract class Balloon {
       }
     }
     if (direction.equals("leftturningdown")) {
-      if (xcor % 60 < 30) {
+      if (xcor % 60 > 30) {
         xcor -= speed; 
       }
       else {
@@ -100,7 +96,7 @@ abstract class Balloon {
       }
     }
     if (direction.equals("leftturningup")) {
-      if (xcor % 60 < 30) {
+      if (xcor % 60 > 30) {
         xcor -= speed; 
       }
       else {
@@ -123,7 +119,7 @@ abstract class Balloon {
         ycor += speed; 
       }
     }
-    }
+    
   }
 
   public abstract void loseLife(); 

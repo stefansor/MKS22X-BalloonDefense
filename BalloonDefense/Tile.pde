@@ -15,6 +15,22 @@ class Tile{
        stuff = new ArrayList<Tool>();
       }
       
+      void addTool(Tool t){
+        stuff.add(t);
+      }
+      
+      Tool getTool(int n){
+       return stuff.get(n);
+      }
+      
+      void removeTool(int n){
+       stuff.remove(n);  
+      }
+      
+      int stuffLength(){
+       return stuff.size(); 
+      }
+      
       String getDir(){
        return direction; 
       }
