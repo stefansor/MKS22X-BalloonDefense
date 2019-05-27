@@ -1,14 +1,4 @@
-ArrayList<RegularBalloon> RegBalloons = new ArrayList<RegularBalloon>(); 
-int counter = 0; 
-Tile[][] tiles = new Tile[10][10];
-ArrayList<Tool> tools = new ArrayList<Tool>();
-
-int coins = 200;
-RegularBalloon r = new RegularBalloon(1, 6, 153, false, true);
-Tool tac;
-    void setup(){
-      size(750, 600);
-      
+void setuptiles() {
       for (int r = 0; r < 10; r++) {
         for (int c = 0; c < 10; c++) {
           Tile t = new Tile(0, 0, false, "blank"); 
@@ -93,47 +83,7 @@ Tool tac;
           }       
         }
       }
+      
       r.setEnd(tiles[9][8]); 
-      //tiles[1][1] = new Tile(0, 0, false, "blank"); 
-      println(tiles[9][8].getDir()); 
-      println(tiles[7][3].getDir()); 
-      tac = new Tack(90, 30);
-      tools.add(tac);
-    }
-    
-    
-    void draw(){
-      background(255);
-      
-      for(int i = 0; i < tiles.length; i++){
-        for(int j = 0; j < tiles[0].length; j++){
-         tiles[i][j].display(); 
-        }
-      }
-      /*
-      counter++; 
-      if (counter%50 == 0 && counter < 5000) {
-        RegularBalloon b = new RegularBalloon(1, 2, #ff0000, false, true);
-        RegBalloons.add(b);  
-      }
-      
-       for (RegularBalloon rb : RegBalloons) {
-         rb.move(); 
-         rb.display(); 
-       }
-      */
-      ///*
-      for(Tool t : tools){
-        t.getTile().addTool(t);
-        t.display();
-      }
-      r.update();
-      r.display();
-      r.move();
-      print(r.xcor); 
-      println(r.ycor); 
-      //*/
-    }
-  
-  
- 
+      //tiles[1][1].addTool(tack) 
+}
