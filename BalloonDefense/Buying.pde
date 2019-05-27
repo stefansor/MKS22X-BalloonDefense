@@ -39,6 +39,7 @@ void mouseClicked() {
     if (toolPicked == 1) {
       Tack t = new Tack (mouseX, mouseY); 
       getTile(mouseX, mouseY).addTool(t); 
+      selected = false;
     }
   }
 }

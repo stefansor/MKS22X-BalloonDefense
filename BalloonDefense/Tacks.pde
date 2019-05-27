@@ -1,13 +1,11 @@
 class Tack extends Tools{
     private int x,y,lives;
-    private PImage img; 
     
     
     Tack(int posx, int posy){
       x = posx;
       y = posy;
       lives = 10; 
-      img = loadImage("tacks.jpg");
     }
     
     void loseLife(){
@@ -18,13 +16,18 @@ class Tack extends Tools{
      return lives; 
     }
     
-    PImage getImage() {
-      return img; 
-    }
-    
     void display(){
-      if (lives > 0) {
-        image(img, x-15, y-15, 30, 30);
+      fill(255, 153, 0);
+      if(lives > 0){
+        triangle(x, y, x + 2, y + 1, x + 2, y + 2);
+        triangle(x - 4, y + 4, x - 5, y + 3, x - 2, y + 7);
+        triangle( x + 7, y + 1, x + 8, y + 2, x + 4, y + 4);
+        triangle(x + 1, y + 9, x + 4, y + 7, x + 5, y + 9);
       }
-    } 
+    }
+  
+  
+  
+  
+  
 }
