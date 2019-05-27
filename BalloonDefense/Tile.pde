@@ -54,8 +54,16 @@ class Tile{
         }
       }
       
+      Tools getTool(int n){
+        return weapons.get(n);
+      }
+      
       void addTool(Tools t) {
         weapons.add(t); 
+      }
+      
+      int weaponsLength(){
+       return weapons.size();
       }
       
       void remove(Tools t) {

@@ -23,6 +23,10 @@ abstract class Balloon {
     }
   }
   
+  int getLives(){
+   return lives;  
+  }
+  
   Tile getTile(){
     for(int i = 0; i < tiles.length ; i++){
      for(int j = 0; j < tiles[0].length; j++){

@@ -12,7 +12,6 @@ RegularBalloon r = new RegularBalloon(1, 5, 153, false, true);
     }
     
     void update() {
-      //if mouse pressed and dragged, add tool to list
       //coins changes 
     }
     
@@ -32,10 +31,18 @@ RegularBalloon r = new RegularBalloon(1, 5, 153, false, true);
       }
       
       for (RegularBalloon rb : RegBalloons) {
-        update(); 
+        rb.update(); 
         rb.move(); 
         rb.display(); 
        }
+       
+       if(RegBalloons.size() > 0){
+         println("ballon lives : " + RegBalloons.get(0).getLives());
+          for(int i = 0; i < RegBalloons.get(0).getTile().weaponsLength(); i++){
+             println("is touching: " + RegBalloons.get(0).getTile().getTool(0).isTouching(RegBalloons.get(0)));
+          }
+       }
+       
 
     }
   

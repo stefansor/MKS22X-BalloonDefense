@@ -31,15 +31,16 @@ void mouseClicked() {
   if (mouseX > 600) {
     if (mouseX > 650 && mouseX < 750 && mouseY > 150 && mouseY < 250) {
       toolPicked = 1; 
-      coins -= 10; 
       selected = true; 
     }
   }
   else if (selected) {
     if (toolPicked == 1) {
-      Tack t = new Tack (mouseX, mouseY); 
-      getTile(mouseX, mouseY).addTool(t); 
-      selected = false;
+      if(coins >= 10){
+        Tack t = new Tack (mouseX, mouseY); 
+        getTile(mouseX, mouseY).addTool(t); 
+        coins -= 10;
+      }
     }
   }
 }

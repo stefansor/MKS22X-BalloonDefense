@@ -2,7 +2,8 @@ abstract class Tools{
   float xcor, ycor; 
   
   boolean isTouching(Balloon other) {
-    return dist(xcor, ycor, other.xcor,other.ycor) <= 10;
+  return (xcor <= other.xcor && other.xcor < xcor + 10
+  && ycor <= other.ycor && other.ycor < ycor + 10);
   }
   
   abstract void display();

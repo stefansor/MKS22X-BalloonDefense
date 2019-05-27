@@ -4,10 +4,21 @@ class RegularBalloon extends Balloon {
     super(l, s, c, e, p); 
   }
   
-  void loseLife() {
-    lives--; 
-    if (lives == 0) {
+  void loseLife() { 
+    if (lives <= 0) {
       popped = true; 
     }
+    else{
+     lives--; 
+    }
   }
+  void update(){
+    for(int i = 0; i < getTile().weaponsLength(); i++){
+     if(getTile().getTool(i).isTouching(this)){
+       this.loseLife();
+     }
+    }
+    
+  }
+
 }
