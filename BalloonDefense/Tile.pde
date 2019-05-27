@@ -4,6 +4,7 @@ class Tile{
       private boolean towerable;
       private String direction;
       private PImage img; 
+      ArrayList<Tools> weapons = new ArrayList<Tools>(); 
       
       Tile(int tw, int tl, boolean tower, String dir){
        x = tw;
@@ -45,8 +46,19 @@ class Tile{
       void setImage(String m){
        img = loadImage(m);  
       }
+      
       void display(){
         image(img, x, y, 60, 60);
-        
+        for (Tools tool : weapons) {
+          tool.display(); 
+        }
+      }
+      
+      void addTool(Tools t) {
+        weapons.add(t); 
+      }
+      
+      void remove(Tools t) {
+        weapons.remove(t); 
       }
     }

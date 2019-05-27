@@ -85,4 +85,5 @@ void setuptiles() {
       }
       
       r.setEnd(tiles[9][8]); 
+      //tiles[1][1].addTool(tack) 
 }

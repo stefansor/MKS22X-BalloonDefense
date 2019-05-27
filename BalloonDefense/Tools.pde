@@ -6,4 +6,5 @@ abstract class Tools{
   }
   
   abstract void display();
+  abstract PImage getImage(); 
 }
