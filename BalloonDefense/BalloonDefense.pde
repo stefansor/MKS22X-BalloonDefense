@@ -2,7 +2,7 @@ ArrayList<RegularBalloon> RegBalloons = new ArrayList<RegularBalloon>();
 int counter = 0; 
 Tile[][] tiles = new Tile[10][10];
 
-int coins = 200;
+//int coins = 200;
 RegularBalloon r = new RegularBalloon(1, 5, 153, false, true);
   
     void setup(){
@@ -17,12 +17,7 @@ RegularBalloon r = new RegularBalloon(1, 5, 153, false, true);
     }
     
     void draw(){
-      fill(255,235,205); 
-      rect(540, 0, 460, 900);
-      fill(0, 0, 0); 
-      textSize(32); 
-      String money = "Coins: " + coins; 
-      text(money, 650, 100);
+      infosetup(); 
       
       for(int i = 0; i < tiles.length; i++){
         for(int j = 0; j < tiles[0].length; j++){
