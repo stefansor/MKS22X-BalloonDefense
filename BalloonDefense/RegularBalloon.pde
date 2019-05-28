@@ -1,13 +1,13 @@
 class RegularBalloon extends Balloon {
   
-  RegularBalloon(int l, int s, int c, boolean e, boolean p) {
-    super(l, s, c, e, p); 
+  RegularBalloon() {
+    super(1, 3, 153, true, true); 
   }
   
   void loseLife() {
-    lives--; 
-    if (lives == 0) {
-      popped = true; 
+    setLives(getLives() - 1);
+    if (getLives() == 0) {
+      setPopped(); 
     }
   }
 }

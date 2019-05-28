@@ -1,7 +1,7 @@
 abstract class Balloon {
-  int xcor, ycor, lives, speed, hue; 
-  boolean explode, pop, popped;
-  Tile end; 
+  private int xcor, ycor, lives, speed, hue; 
+  private boolean explode, pop, popped;
+  private Tile end; 
   
   Balloon(int l, int s, int c, boolean e, boolean p) {
     xcor = 90; 
@@ -38,6 +38,22 @@ abstract class Balloon {
   
   void setEnd(Tile e) {
     end = e; 
+  }
+  
+  Tile getEnd() {
+    return end; 
+  }
+  
+  int getLives() {
+    return lives; 
+  }
+  
+  void setLives(int l) {
+    lives = l; 
+  }
+  
+  void setPopped() {
+    popped = true; 
   }
   
   void move() {    
