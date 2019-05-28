@@ -22,7 +22,7 @@ void infosetup() {
   String money = "Coins: " + coins; 
   text(money, 610, 120);
   
-  PImage i = loadImage("tacks.jpg");
+  PImage i = loadImage("tacks.png");
   image(i, 700, 200, 100, 100);
 }
 

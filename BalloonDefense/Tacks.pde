@@ -7,7 +7,7 @@ class Tack extends Tools{
       setX(posx); 
       setY(posy); 
       lives = 5; 
-      img = loadImage("tacks.jpg");
+      img = loadImage("tacks.png");
     }
     
     void loseLife(){
