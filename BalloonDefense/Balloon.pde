@@ -69,6 +69,10 @@ abstract class Balloon {
     for (int i = 0; i < t.size(); i++) {
       if (t.get(i).isTouching(this)) {
         loseLife(); 
+        t.get(i).loseLife(); 
+        if (t.get(i).getLives() == 0) {
+          t.remove(i); 
+        }
       }
     }
   }
