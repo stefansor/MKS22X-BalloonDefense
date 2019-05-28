@@ -22,7 +22,7 @@ class Tile{
        direction = d;
       }
       
-      boolean isTowerbale(){
+      boolean isTowerable(){
        return towerable; 
       }
       

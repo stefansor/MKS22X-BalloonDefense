@@ -10,20 +10,34 @@ void infosetup() {
   rect(540, 0, 460, 900);
   fill(0, 0, 0); 
   textSize(24); 
+  
+  text("Balloon Tower", 610, 30); 
+  text("Defense", 650, 60); 
+  
   String w = "Waves: " + waves; 
-  text(w, 610, 30); 
+  text(w, 610, 90); 
   
   String l = "Lives Left: " + life; 
-  text(l, 610, 60); 
+  text(l, 610, 120); 
   
   String bl = "Balloons Left: " + bLeft; 
-  text(bl, 610, 90); 
+  text(bl, 610, 150); 
   
   String money = "Coins: " + coins; 
-  text(money, 610, 120);
+  text(money, 610, 180);
   
-  PImage i = loadImage("tacks.png");
-  image(i, 700, 200, 100, 100);
+  PImage tack = loadImage("tacks.png");
+  text("Tacks: $10", 690, 210); 
+  image(tack, 700, 210, 100, 100);
+  
+  PImage bomb = loadImage("bomb.png");
+  text("Bombs: $25", 690, 325); 
+  image(bomb, 700, 320, 100, 100);
+  
+  /*
+  PImage tack = loadImage("tacks.png");
+  image(tack, 700, 210, 100, 100);
+  */ 
 }
 
   Tile getTile(int xcor, int ycor){
@@ -46,7 +60,7 @@ void mouseClicked() {
       selected = true; 
     }
   }
-  else if (selected && getTile(mouseX, mouseY).(isTowerable()) {
+  else if (selected && !getTile(mouseX, mouseY).isTowerable()) {
     if (toolPicked == 1) {
       Tack t = new Tack (mouseX, mouseY); 
       getTile(mouseX, mouseY).addTool(t); 

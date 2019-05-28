@@ -30,10 +30,14 @@ RegularBalloon r = new RegularBalloon();
           RegBalloons.remove(i); 
           bLeft--; 
         }
+        if (RegBalloons.get(i).reachedEnd()) {
+          life--; 
+        }
         else {
           RegularBalloon rb = RegBalloons.get(i); 
           rb.popping(); 
           rb.move(); 
+          //rb.reachedEnd(); 
           rb.display(); 
         }
        }

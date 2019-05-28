@@ -1,7 +1,6 @@
 abstract class Balloon {
   private int xcor, ycor, lives, speed, hue; 
-  private boolean explode, pop, popped;
-  private Tile end; 
+  private boolean explode, pop, popped, end;
   
   Balloon(int l, int s, int c, boolean e, boolean p) {
     xcor = 90; 
@@ -12,6 +11,7 @@ abstract class Balloon {
     explode = e;
     pop = p; 
     popped = false; 
+    end = false;
   }
   
   void display() {
@@ -44,14 +44,6 @@ abstract class Balloon {
     return ycor; 
   }
   
-  void setEnd(Tile e) {
-    end = e; 
-  }
-  
-  Tile getEnd() {
-    return end; 
-  }
-  
   int getLives() {
     return lives; 
   }
@@ -77,10 +69,15 @@ abstract class Balloon {
     }
   }
   
+  boolean reachedEnd() {
+    return end; 
+  }
+  
   void move() {    
-    if (popped || getTile().equals(end)) {
-      popped = true; 
-    }
+    if (ycor >= 600) {
+      popped = true;
+      end = true; 
+    } 
     else {
       String direction = getTile().getDir(); 
       if (direction.equals("up")) {
