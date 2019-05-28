@@ -1,12 +1,12 @@
 class Tack extends Tools{
-    private int x,y,lives;
+    private int lives;
     private PImage img; 
     
     
-    Tack(int posx, int posy){
-      x = posx;
-      y = posy;
-      lives = 10; 
+    Tack(float posx, float posy){
+      setX(posx); 
+      setY(posy); 
+      lives = 5; 
       img = loadImage("tacks.jpg");
     }
     
@@ -24,7 +24,7 @@ class Tack extends Tools{
     
     void display(){
       if (lives > 0) {
-        image(img, x-15, y-15, 30, 30);
+        image(img, getX()-15, getY()-15, 30, 30);
       }
     } 
 }

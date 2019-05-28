@@ -1,5 +1,5 @@
 abstract class Tools{
-  float xcor, ycor; 
+  private float xcor, ycor; 
   
   boolean isTouching(Balloon other) {
     float x = other.getxcor(); 
@@ -10,6 +10,22 @@ abstract class Tools{
     else {
       return false; 
     }
+  }
+  
+  float getX() {
+    return xcor; 
+  }
+  
+  float getY() {
+    return ycor; 
+  }
+  
+  void setX(float x) {
+    xcor = x; 
+  }
+  
+  void setY(float y) {
+    ycor = y; 
   }
   
   abstract void display();
