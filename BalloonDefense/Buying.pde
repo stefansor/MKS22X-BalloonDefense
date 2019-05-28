@@ -46,7 +46,7 @@ void mouseClicked() {
       selected = true; 
     }
   }
-  else if (selected) {
+  else if (selected && getTile(mouseX, mouseY).(isTowerable()) {
     if (toolPicked == 1) {
       Tack t = new Tack (mouseX, mouseY); 
       getTile(mouseX, mouseY).addTool(t); 

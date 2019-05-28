@@ -26,7 +26,7 @@ class Tile{
        return towerable; 
       }
       
-      void setTowerbale(boolean s){
+      void setTowerable(boolean s){
        towerable = s;
       }
       
