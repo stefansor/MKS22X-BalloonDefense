@@ -61,4 +61,8 @@ class Tile{
       void remove(Tools t) {
         weapons.remove(t); 
       }
+      
+      ArrayList getList() {
+        return weapons; 
+      }
     }

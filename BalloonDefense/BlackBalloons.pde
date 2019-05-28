@@ -1,7 +1,7 @@
 class BlackBalloons extends Balloon{
   
   BlackBalloons() {
-    super(1, 5, 0, true, true); 
+    super(1, 5, #000000, true, true); 
   }
   
   void loseLife() {

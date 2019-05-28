@@ -36,6 +36,14 @@ abstract class Balloon {
     return n;
   }
   
+  float getxcor() {
+    return xcor; 
+  }
+  
+  float getycor() {
+    return ycor; 
+  }
+  
   void setEnd(Tile e) {
     end = e; 
   }
@@ -54,6 +62,15 @@ abstract class Balloon {
   
   void setPopped() {
     popped = true; 
+  }
+  
+  void popping() {
+    ArrayList<Tools> t = getTile().getList(); 
+    for (int i = 0; i < t.size(); i++) {
+      if (t.get(i).isTouching(this)) {
+        loseLife(); 
+      }
+    }
   }
   
   void move() {    

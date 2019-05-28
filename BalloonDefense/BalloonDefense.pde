@@ -10,11 +10,6 @@ RegularBalloon r = new RegularBalloon();
       setuptiles(); 
     }
     
-    void update() {
-      //if mouse pressed and dragged, add tool to list
-      //coins changes 
-    }
-    
     void draw(){
       infosetup(); 
       
@@ -33,9 +28,11 @@ RegularBalloon r = new RegularBalloon();
       for (int i = 0; i < RegBalloons.size(); i++) {
         if (RegBalloons.get(i).getLives() == 0) {
           RegBalloons.remove(i); 
+          bLeft--; 
         }
         else {
           RegularBalloon rb = RegBalloons.get(i); 
+          rb.popping(); 
           rb.move(); 
           rb.display(); 
         }
