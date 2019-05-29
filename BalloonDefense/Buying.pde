@@ -26,8 +26,6 @@ void infosetup() {
   String money = "Coins: " + coins; 
   text(money, 610, 180);
   
-  imageMode(CENTER);
-  
   PImage tack = loadImage("tacks.png");
   text("Tacks: $10", 690, 250); 
   image(tack, 650, 240, 50, 50);

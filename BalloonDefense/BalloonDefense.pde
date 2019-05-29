@@ -16,6 +16,7 @@ RegularBalloon r = new RegularBalloon();
       for(int i = 0; i < tiles.length; i++){
         for(int j = 0; j < tiles[0].length; j++){
          tiles[i][j].display(); 
+         println("tile coordinates: " + tiles[i][j].getX() + " " + tiles[i][j].getY());
         }
       }
       
