@@ -24,6 +24,9 @@ void infosetup() {
   
   PImage i = loadImage("tacks.png");
   image(i, 700, 200, 100, 100);
+  
+  PImage c = loadImage("catapult.jpeg");
+  image(c, 700, 400, 100, 100);
 }
 
   Tile getTile(int xcor, int ycor){
@@ -41,16 +44,37 @@ void infosetup() {
 
 void mouseClicked() {
   if (mouseX > 600) {
-    if (mouseX > 650 && mouseX < 750 && mouseY > 150 && mouseY < 250) {
-      toolPicked = 1; 
-      selected = true; 
+    if (mouseX > 650 && mouseX < 750 && mouseY > 150 && mouseY < 250 ) {
+      if(!selected){
+        toolPicked = 1; //tacks 
+        selected = true;
+      }
+      else{
+        selected = false;
+      }
+    }
+    if(mouseX > 650 && mouseX < 750 && mouseY > 350 && mouseY < 450 ){
+      if(!selected){
+        toolPicked = 2; //catapult
+        selected = true;
+      }
+      else{
+       selected = false; 
+      }
     }
   }
-  else if (selected && !getTile(mouseX, mouseY).isTowerable()) {
-    if (toolPicked == 1) {
+  
+  
+  else if (selected) {
+    if (toolPicked == 1 && !getTile(mouseX, mouseY).isTowerable()) {
       Tack t = new Tack (mouseX, mouseY); 
       getTile(mouseX, mouseY).addTool(t); 
       coins -= 10; 
+    }
+    else if(toolPicked == 2 && getTile(mouseX, mouseY).isTowerable()){
+      Catapult c = new Catapult(mouseX, mouseY);
+      getTile(mouseX, mouseY).addTool(c);
+      coins -= 100;
     }
   }
 }

@@ -50,7 +50,7 @@ class Tile{
       void display(){
         image(img, x, y, 60, 60);
         for (Tools tool : weapons) {
-          tool.display(); 
+           tool.display(); 
         }
       }
       

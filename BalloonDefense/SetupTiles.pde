@@ -8,6 +8,7 @@ void setuptiles() {
 
       for(int i = 0; i < tiles.length; i++){
         for(int j = 0; j < tiles[0].length; j++){
+          
           tiles[i][j].setX(j*60);
           tiles[i][j].setY(i*60);
           
