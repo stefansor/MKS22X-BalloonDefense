@@ -8,16 +8,18 @@
 
 5/21/2019
 - Vivien: During the first half of class, Stefan and I talked about how we could set up the map and write a getTile to identify which tile the balloon is on. Then, I started to work on displaying coins and adding tools. I wrote the abstract class Tools and am in the process of writing Tack. I also experimented a little with Stefan's code. Tomorrow, we need to merge the tiles with master and make sure RegularBalloons works on the map. Oncce we confirm that, we can focus on completing the additional displays and Tack.   
-- Stefan: At home I wrote getTile and finished the map design. I integrated some of Vivien's code to see how the balloon will start to interact with the tiles and if the getTile works. I also started to write the move function and will finish later tomorrow. 
+- Stefan: At home I wrote getTile and finished the map design. I integrated some of Vivien's code to see how the balloon will start to interact with the tiles and if the getTile works. I also started to write the move function and will finish later tomorrow.
 
 5/23/2019
-- Vivien: I worked on completing move so that it smoothly manuvers balloons around corners. I also tried to experiment and find ways to record the last tile to stop the balloon movement. Other than adding an if statement to move to stop balloons at the end, Balloons and RegularBalloons seem complete. 
+- Vivien: I worked on completing move so that it smoothly manuvers balloons around corners. I also tried to experiment and find ways to record the last tile to stop the balloon movement. Other than adding an if statement to move to stop balloons at the end, Balloons and RegularBalloons seem complete.
+- Stefan: I worked on generating the tacks to see if they could be placed on the path exclusively. I used some triangle to create a small tack like object that we latter will replace with an image.
 
 5/24/2019
-- Vivien: I fixed move so that the balloons pop when they reach the finish line. Then, I experimented with mouseClick(), mouseX and mouseY to figure out how to place the takcs on the map. I also experimented with printing text to show the information on the side. 
-  
+- Vivien: I fixed move so that the balloons pop when they reach the finish line. Then, I experimented with mouseClick(), mouseX and mouseY to figure out how to place the tacks on the map. I also experimented with printing text to show the information on the side.
+
 5/27/2019
-- Vivien: First, I wrote methods to purchase and place tacks on the map. Then, I worked on making the balloons pop when they are in contact with the tack. Once I completed that, I made sure that the tacks lost lives as they popped balloons and disappeared once they lost all their lives. I also wrote the basic outlines of BlackBalloons(when popped, they generate 5 RegularBalloons) and IronBalloons(can only be exploded). Lastly, I completed the list of basic information on the side. 
+- Vivien: First, I wrote methods to purchase and place tacks on the map. Then, I worked on making the balloons pop when they are in contact with the tack. Once I completed that, I made sure that the tacks lost lives as they popped balloons and disappeared once they lost all their lives. I also wrote the basic outlines of BlackBalloons(when popped, they generate 5 RegularBalloons) and IronBalloons(can only be exploded). Lastly, I completed the list of basic information on the side.
 
 5/28/2019
 - Vivien: I fixed how livesLeft was change. Because I didn't remove a balloon from the list of balloons in the game when it reached the finish line, the balloon continued to move even though it was not displayed. This cause livesLeft to become a negative number. Afterwards, I wrote the bomb class. Then, I added to mouseClicked() to include when a bomb is purchased and placed. I am working on getting bombs to explode the balloons surrounding it.  
+- Stefan: I worked on the catapult and bullet class. I tried to get the catapult to shoot a bullet but it doesn't seem to visually move outside the image of just the catapult. I merged to master and rearranged the text and tool generater to have both the bomb and catapult in the store section. The map, upon merging, for some reason is moved up and to the right screwing with the visualization of the tiles but not their paths apparently. I will try to fix this later in school. 
