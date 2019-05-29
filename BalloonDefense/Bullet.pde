@@ -25,13 +25,13 @@ class Bullet{
   
   void display(){
    if(firing){
-     push();
+     pushMatrix();
        translate(x, y);
        rotate(rotation);
        rectMode(CENTER);
        fill(255);
        rect(0,0, 20, 30);
-     pop();
+     popMatrix();
    }
     
     
