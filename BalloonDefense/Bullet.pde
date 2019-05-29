@@ -4,11 +4,11 @@ class Bullet{
   int speed;
   
   
-  Bullet(float xcor, float ycor){
+  Bullet(float xcor, float ycor, float rot){
     x = xcor;
     y = ycor; 
-    speed = 10; 
-    rotation = 0;
+    speed = 5; 
+    rotation = rot;
     firing = true;
   }
   

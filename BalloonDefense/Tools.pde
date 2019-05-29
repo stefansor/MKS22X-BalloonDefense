@@ -32,4 +32,6 @@ abstract class Tools{
   abstract void loseLife(); //NEED TO TALK ABOUT THIS
   abstract void display();
   abstract PImage getImage(); 
+  abstract boolean isCatapult();
+  abstract void shoot();
 }

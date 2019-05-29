@@ -51,6 +51,9 @@ class Tile{
         image(img, x, y, 60, 60);
         for (Tools tool : weapons) {
            tool.display(); 
+           if(tool.isCatapult()){
+            tool.shoot(); 
+           }
         }
       }
       

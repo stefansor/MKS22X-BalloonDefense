@@ -27,4 +27,10 @@ class Tack extends Tools{
         image(img, getX()-15, getY()-15, 30, 30);
       }
     } 
+    boolean isCatapult(){
+     return false; 
+    }
+    void shoot(){
+    
+    }
 }
