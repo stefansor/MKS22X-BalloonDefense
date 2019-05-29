@@ -31,13 +31,13 @@ RegularBalloon r = new RegularBalloon();
           bLeft--; 
         }
         if (RegBalloons.get(i).reachedEnd()) {
+          RegBalloons.remove(i); 
           life--; 
         }
         else {
           RegularBalloon rb = RegBalloons.get(i); 
           rb.popping(); 
           rb.move(); 
-          //rb.reachedEnd(); 
           rb.display(); 
         }
        }
