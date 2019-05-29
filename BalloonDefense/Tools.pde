@@ -54,10 +54,7 @@ abstract class Tools{
   }
   
   abstract void display();
-<<<<<<< HEAD
-=======
   abstract PImage getImage(); 
   abstract boolean isCatapult();
   abstract void shoot();
->>>>>>> catapult
 }

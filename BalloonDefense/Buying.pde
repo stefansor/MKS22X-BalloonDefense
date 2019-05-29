@@ -26,26 +26,19 @@ void infosetup() {
   String money = "Coins: " + coins; 
   text(money, 610, 180);
   
-  PImage tack = loadImage("tacks.png");
-  text("Tacks: $10", 690, 210); 
-  image(tack, 700, 210, 100, 100);
+  imageMode(CENTER);
   
-  PImage bomb = loadImage("bomb.png");
-  text("Bombs: $25", 690, 325); 
-  image(bomb, 700, 320, 100, 100);
-  
-<<<<<<< HEAD
-  /*
   PImage tack = loadImage("tacks.png");
-  image(tack, 700, 210, 100, 100);
-  */ 
-=======
-  PImage i = loadImage("tacks.png");
-  image(i, 700, 200, 100, 100);
+  text("Tacks: $10", 690, 250); 
+  image(tack, 650, 240, 50, 50);
   
   PImage c = loadImage("catapult.jpeg");
-  image(c, 700, 400, 100, 100);
->>>>>>> catapult
+  text("Catapult: $100", 690, 320);
+  image(c, 650, 310, 50, 50);
+  
+  PImage bomb = loadImage("bomb.png");
+  text("Bombs: $25", 690, 390); 
+  image(bomb, 650, 380, 50, 50);
 }
 
   Tile getTile(int xcor, int ycor){
@@ -63,12 +56,8 @@ void infosetup() {
 
 void mouseClicked() {
   if (mouseX > 600) {
-<<<<<<< HEAD
-    if (mouseX >= 700 && mouseX <= 800 && mouseY >= 210 && mouseY <= 310) {
-      toolPicked = 1; 
-      selected = true; 
-=======
-    if (mouseX > 650 && mouseX < 750 && mouseY > 150 && mouseY < 250 ) {
+
+    if (mouseX > 625 && mouseX < 675 && mouseY > 215 && mouseY < 265 ) {
       if(!selected){
         toolPicked = 1; //tacks 
         selected = true;
@@ -77,7 +66,7 @@ void mouseClicked() {
         selected = false;
       }
     }
-    if(mouseX > 650 && mouseX < 750 && mouseY > 350 && mouseY < 450 ){
+    if(mouseX > 625 && mouseX < 675 && mouseY > 285 && mouseY < 335 ){
       if(!selected){
         toolPicked = 2; //catapult
         selected = true;
@@ -85,38 +74,26 @@ void mouseClicked() {
       else{
        selected = false; 
       }
->>>>>>> catapult
     }
-    if (mouseX >= 700 && mouseX <= 800 && mouseY >= 320 && mouseY <= 420) {
-      toolPicked = 2; 
-      selected = true; 
-    }
-  }
-<<<<<<< HEAD
-  else if (selected && !getTile(mouseX, mouseY).isTowerable()) {
-    if (toolPicked == 1) {
-=======
-  
-  
-  else if (selected) {
-    if (toolPicked == 1 && !getTile(mouseX, mouseY).isTowerable()) {
->>>>>>> catapult
-      Tack t = new Tack (mouseX, mouseY); 
-      getTile(mouseX, mouseY).addTool(t); 
-      coins -= 10; 
-    }
-<<<<<<< HEAD
-    if (toolPicked == 2) {
-      Bomb b = new Bomb (mouseX, mouseY); 
-      getTile(mouseX, mouseY).addTool(b); 
-      coins -= 25;
-    }
-=======
     else if(toolPicked == 2 && getTile(mouseX, mouseY).isTowerable()){
       Catapult c = new Catapult(mouseX, mouseY);
       getTile(mouseX, mouseY).addTool(c);
       coins -= 100;
->>>>>>> catapult
     }
+    if(mouseX > 625 && mouseX < 675 && mouseY > 355 && mouseY < 405 ){
+      if(!selected){
+        toolPicked = 3; //bomb
+        selected = true;
+      }
+      else{
+       selected = false; 
+      }
+    }
+    else if(toolPicked == 3 && !getTile(mouseX, mouseY).isTowerable()){
+      Bomb b = new Bomb (mouseX, mouseY); 
+      getTile(mouseX, mouseY).addTool(b); 
+      coins -= 25;
+    }
+    
   }
 }

@@ -23,13 +23,15 @@ class Tack extends Tools{
         image(img, getX()-20, getY()-20, 40, 40);
       }
     } 
-<<<<<<< HEAD
-=======
+
     boolean isCatapult(){
      return false; 
     }
     void shoot(){
     
     }
->>>>>>> catapult
+    
+    PImage getImage(){
+     return img; 
+    }
 }

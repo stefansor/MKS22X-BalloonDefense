@@ -34,5 +34,16 @@ class Bomb extends Tools{
       }
     }
   
+  boolean isCatapult(){
+   return false; 
+  }
+  
+  void shoot(){
+    
+  }
+  
+  PImage getImage(){
+   return img; 
+  }
   
 }
