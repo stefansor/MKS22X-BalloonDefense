@@ -12,6 +12,12 @@
 
 5/23/2019
 - Vivien: I worked on completing move so that it smoothly manuvers balloons around corners. I also tried to experiment and find ways to record the last tile to stop the balloon movement. Other than adding an if statement to move to stop balloons at the end, Balloons and RegularBalloons seem complete. 
+
+5/24/2019
+- Vivien: I fixed move so that the balloons pop when they reach the finish line. Then, I experimented with mouseClick(), mouseX and mouseY to figure out how to place the takcs on the map. I also experimented with printing text to show the information on the side. 
   
 5/27/2019
-- Vivien: First, I wrote methods to purchase and place tacks on the map. Then, I worked on making the balloons pop when they are in contact with the tack. Once I completed that, I made sure that the tacks lost lives as they popped balloons and disappeared once they lost all their lives. I also wrote the basic outlines of BlackBalloons(when popped, they generate 5 RegularBalloons) and IronBalloons(can only be exploded). Lastly, I added the list of basic information on the side.  
+- Vivien: First, I wrote methods to purchase and place tacks on the map. Then, I worked on making the balloons pop when they are in contact with the tack. Once I completed that, I made sure that the tacks lost lives as they popped balloons and disappeared once they lost all their lives. I also wrote the basic outlines of BlackBalloons(when popped, they generate 5 RegularBalloons) and IronBalloons(can only be exploded). Lastly, I completed the list of basic information on the side. 
+
+5/28/2019
+- Vivien: I fixed how livesLeft was change. Because I didn't remove a balloon from the list of balloons in the game when it reached the finish line, the balloon continued to move even though it was not displayed. This cause livesLeft to become a negative number. Afterwards, I wrote the bomb class. Then, I added to mouseClicked() to include when a bomb is purchased and placed. I am working on getting bombs to explode the balloons surrounding it.  
