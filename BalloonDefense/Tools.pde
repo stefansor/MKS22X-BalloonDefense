@@ -28,8 +28,12 @@ abstract class Tools{
     ycor = y; 
   }
   
-  abstract int getLives(); //NEED TO TALK ABOUT THIS
-  abstract void loseLife(); //NEED TO TALK ABOUT THIS
+  int getLives() { //NEED TO TALK ABOUT THIS
+    return 1; 
+  }
+  
+  void loseLife() { //NEED TO TALK ABOUT THIS
+  }
+  
   abstract void display();
-  abstract PImage getImage(); 
 }
