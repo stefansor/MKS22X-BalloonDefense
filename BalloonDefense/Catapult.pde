@@ -33,4 +33,8 @@ class Catapult extends Tools{
    return img; 
   }
   
+  void shoot(){
+    
+  }
+  
 }
