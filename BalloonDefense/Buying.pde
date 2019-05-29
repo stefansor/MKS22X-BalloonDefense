@@ -27,16 +27,16 @@ void infosetup() {
   text(money, 610, 180);
   
   PImage tack = loadImage("tacks.png");
-  text("Tacks: $10", 690, 250); 
-  image(tack, 650, 240, 50, 50);
+  text("Tacks: $10", 700, 260); 
+  image(tack, 625, 215, 75, 75);
   
   PImage c = loadImage("catapult.jpeg");
-  text("Catapult: $100", 690, 320);
-  image(c, 650, 310, 50, 50);
+  text("Catapult: $100", 700, 330);
+  image(c, 625, 290, 75, 75);
   
   PImage bomb = loadImage("bomb.png");
-  text("Bombs: $25", 690, 390); 
-  image(bomb, 650, 380, 50, 50);
+  text("Bombs: $25", 700, 420); 
+  image(bomb, 630, 370, 75, 75);
 }
 
   Tile getTile(int xcor, int ycor){
