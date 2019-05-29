@@ -29,7 +29,7 @@ class Bomb extends Tools{
   
   void display(){
       if (lives > 0) {
-        image(img, getX()-15, getY()-15, 30, 30);
+        image(img, getX()-20, getY()-20, 40, 40);
       }
     }
   

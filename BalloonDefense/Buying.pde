@@ -55,8 +55,12 @@ void infosetup() {
 
 void mouseClicked() {
   if (mouseX > 600) {
-    if (mouseX > 650 && mouseX < 750 && mouseY > 150 && mouseY < 250) {
+    if (mouseX >= 700 && mouseX <= 800 && mouseY >= 210 && mouseY <= 310) {
       toolPicked = 1; 
+      selected = true; 
+    }
+    if (mouseX >= 700 && mouseX <= 800 && mouseY >= 320 && mouseY <= 420) {
+      toolPicked = 2; 
       selected = true; 
     }
   }
@@ -65,6 +69,11 @@ void mouseClicked() {
       Tack t = new Tack (mouseX, mouseY); 
       getTile(mouseX, mouseY).addTool(t); 
       coins -= 10; 
+    }
+    if (toolPicked == 2) {
+      Bomb b = new Bomb (mouseX, mouseY); 
+      getTile(mouseX, mouseY).addTool(b); 
+      coins -= 25; 
     }
   }
 }
