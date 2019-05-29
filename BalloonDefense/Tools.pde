@@ -1,15 +1,33 @@
 abstract class Tools{
   private float xcor, ycor; 
+  private boolean isT = false; 
+  private boolean isB = false; 
   
   boolean isTouching(Balloon other) {
     float x = other.getxcor(); 
     float y = other.getycor(); 
-    if (x < xcor + 30 && x > xcor - 30 && y < ycor + 30 && y > ycor - 30) {
+    if (x < xcor + 15 && x > xcor - 15 && y < ycor + 15 && y > ycor - 15) {
       return true;
     }
     else {
       return false; 
     }
+  }
+  
+  void changeisT() {
+    isT = true; 
+  }
+  
+  void changeisB() {
+    isB = true; 
+  }
+  
+  boolean isTack() {
+    return isT; 
+  }
+  
+  boolean isBomb() {
+    return isB; 
   }
   
   float getX() {

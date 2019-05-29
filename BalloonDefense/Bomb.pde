@@ -14,12 +14,13 @@ class Bomb extends Tools{
   }
   
   void loseLife() { 
+    lives--; 
   }
   
   boolean isTouching(Balloon other) {
     float x = other.getxcor(); 
     float y = other.getycor(); 
-    if (x < getX() + 90 && x > getX() - 90 && y < getY() + 90 && y > getY() - 90) {
+    if (x < getX() + 150 && x > getX() - 150 && y < getY() + 150 && y > getY() - 150) {
       return true;
     }
     else {

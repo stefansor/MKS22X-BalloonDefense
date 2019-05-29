@@ -56,9 +56,13 @@ abstract class Balloon {
     popped = true; 
   }
   
-  void popping() {
+  boolean popping() {
+    boolean hasbomb = false; 
     ArrayList<Tools> t = getTile().getList(); 
     for (int i = 0; i < t.size(); i++) {
+      if (t.get(i).isBomb()) {
+        hasbomb = true; 
+      }
       if (t.get(i).isTouching(this)) {
         loseLife(); 
         t.get(i).loseLife(); 
@@ -67,6 +71,7 @@ abstract class Balloon {
         }
       }
     }
+    return hasbomb; 
   }
   
   boolean reachedEnd() {

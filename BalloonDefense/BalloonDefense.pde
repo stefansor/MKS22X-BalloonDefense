@@ -36,6 +36,20 @@ RegularBalloon r = new RegularBalloon();
         }
         else {
           RegularBalloon rb = RegBalloons.get(i); 
+          if (rb.popping()) {
+            if (i+1 < RegBalloons.size()) {
+              RegBalloons.remove(i+1);
+            }
+            if (i+2 < RegBalloons.size()) {
+              RegBalloons.remove(i+2);
+            }
+            if (i-1 > -1) {
+              RegBalloons.remove(i-1);
+            }
+            if (i-2 > -1) {
+              RegBalloons.remove(i-2);
+            }
+          }
           rb.popping(); 
           rb.move(); 
           rb.display(); 
