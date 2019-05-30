@@ -2,7 +2,7 @@ ArrayList<RegularBalloon> RegBalloons = new ArrayList<RegularBalloon>();
 int counter = 0; 
 Tile[][] tiles = new Tile[10][10];
 
-RegularBalloon r = new RegularBalloon();
+BlackBalloon b = new BlackBalloon();
   
     void setup(){
       size(900, 600);
@@ -19,6 +19,18 @@ RegularBalloon r = new RegularBalloon();
         }
       }
       
+      b.popping(); 
+      b.move(); 
+      b.display(); 
+      
+      for (int i = 0; i < RegBalloons.size(); i++) {
+        RegularBalloon rb = RegBalloons.get(i); 
+        rb.popping(); 
+        rb.display(); 
+        rb.move(); 
+      }
+      
+      /*
       counter++; 
       if (counter%10 == 0 && counter < 1000) {
         RegularBalloon b = new RegularBalloon();
@@ -55,7 +67,7 @@ RegularBalloon r = new RegularBalloon();
           rb.display(); 
         }
        }
-
+       */ 
     }
   
   

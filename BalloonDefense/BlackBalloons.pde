@@ -1,6 +1,6 @@
-class BlackBalloons extends Balloon{
+class BlackBalloon extends Balloon{
   
-  BlackBalloons() {
+  BlackBalloon() {
     super(1, 5, #000000, true, true); 
   }
   
