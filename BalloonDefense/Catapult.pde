@@ -21,7 +21,9 @@ class Catapult extends Tools{
      translate(x, y);
      rotation = atan2(mouseY-height/2, mouseX-width/2);
      rotate(rotation);
+     imageMode(CENTER);
      image(img, 0, 0, 40, 40); 
+     imageMode(CORNER);
     popMatrix();
     count++;
   }
