@@ -2,6 +2,7 @@ abstract class Tools{
   private float xcor, ycor; 
   private boolean isT = false; 
   private boolean isB = false; 
+  private boolean isC = false;
   
   boolean isTouching(Balloon other) {
     float x = other.getxcor(); 
@@ -21,6 +22,9 @@ abstract class Tools{
   void changeisB() {
     isB = true; 
   }
+  void changeisC(){
+    isC = true; 
+  }
   
   boolean isTack() {
     return isT; 
@@ -28,6 +32,10 @@ abstract class Tools{
   
   boolean isBomb() {
     return isB; 
+  }
+  
+  boolean isCatapult(){
+   return isC; 
   }
   
   float getX() {
@@ -55,6 +63,5 @@ abstract class Tools{
   
   abstract void display();
   abstract PImage getImage(); 
-  abstract boolean isCatapult();
   abstract void shoot();
 }

@@ -55,7 +55,7 @@ void infosetup() {
 void mouseClicked() {
   if (mouseX > 600) {
 
-    if (mouseX > 625 && mouseX < 675 && mouseY > 215 && mouseY < 265 ) {
+    if (mouseX > 625 && mouseX < 700 && mouseY > 215 && mouseY < 290 ) {
       if(!selected){
         toolPicked = 1; //tacks 
         selected = true;
@@ -64,7 +64,7 @@ void mouseClicked() {
         selected = false;
       }
     }
-    if(mouseX > 625 && mouseX < 675 && mouseY > 285 && mouseY < 335 ){
+    if(mouseX > 625 && mouseX < 700 && mouseY > 290 && mouseY < 365 ){
       if(!selected){
         toolPicked = 2; //catapult
         selected = true;
@@ -73,12 +73,7 @@ void mouseClicked() {
        selected = false; 
       }
     }
-    else if(toolPicked == 2 && getTile(mouseX, mouseY).isTowerable()){
-      Catapult c = new Catapult(mouseX, mouseY);
-      getTile(mouseX, mouseY).addTool(c);
-      coins -= 100;
-    }
-    if(mouseX > 625 && mouseX < 675 && mouseY > 355 && mouseY < 405 ){
+    if(mouseX > 630 && mouseX < 705 && mouseY > 370 && mouseY < 445 ){
       if(!selected){
         toolPicked = 3; //bomb
         selected = true;
@@ -87,11 +82,20 @@ void mouseClicked() {
        selected = false; 
       }
     }
-    else if(toolPicked == 3 && !getTile(mouseX, mouseY).isTowerable()){
+  }
+  else if(toolPicked == 1 && !getTile(mouseX, mouseY).isTowerable()){
+      Tack t = new Tack (mouseX, mouseY); 
+      getTile(mouseX, mouseY).addTool(t); 
+      coins -= 10;
+  }
+  else if(toolPicked == 2 && getTile(mouseX, mouseY).isTowerable()){
+      Catapult c = new Catapult(mouseX, mouseY);
+      getTile(mouseX, mouseY).addTool(c);
+      coins -= 100;
+  }
+  else if(toolPicked == 3 && !getTile(mouseX, mouseY).isTowerable()){
       Bomb b = new Bomb (mouseX, mouseY); 
       getTile(mouseX, mouseY).addTool(b); 
       coins -= 25;
-    }
-    
   }
 }

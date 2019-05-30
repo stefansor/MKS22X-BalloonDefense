@@ -6,6 +6,7 @@ class Bomb extends Tools{
     setX(posx); 
     setY(posy); 
     lives = 1; 
+    changeisB();
     img = loadImage("bomb.png");
   }
   
@@ -33,10 +34,6 @@ class Bomb extends Tools{
         image(img, getX()-20, getY()-20, 40, 40);
       }
     }
-  
-  boolean isCatapult(){
-   return false; 
-  }
   
   void shoot(){
     
