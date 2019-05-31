@@ -1,7 +1,7 @@
 class BlackBalloon extends Balloon{
   
   BlackBalloon() {
-    super(1, 5, #000000, true, true); 
+    super(1, 5, #000000, true, true, 2); 
   }
   
   void loseLife() {
@@ -9,7 +9,7 @@ class BlackBalloon extends Balloon{
     if (getLives() == 0) {
       setPopped(); 
       for (int i = 0; i < 5; i++) {
-        RegBalloons.add(new RegularBalloon()); 
+        Balloons.add(new RegularBalloon()); 
       }
     }
   }
