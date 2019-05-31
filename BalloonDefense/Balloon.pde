@@ -56,7 +56,7 @@ abstract class Balloon {
     popped = true; 
   }
   
-  boolean popping() {
+  boolean popping() { //Need to do something different for ironballoons bc they are only explodable
     boolean hasbomb = false; 
     ArrayList<Tools> t = getTile().getList(); 
     for (int i = 0; i < t.size(); i++) {

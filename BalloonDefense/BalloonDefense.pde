@@ -29,13 +29,13 @@ Tile[][] tiles = new Tile[10][10];
             Balloons.remove(i); 
             bLeft--; 
           }
-          if (Balloons.get(i).reachedEnd()) {
+          if (Balloons.size() > 0 && Balloons.get(i).reachedEnd()) {
             Balloons.remove(i); 
             life--; 
           }
           else {
             Balloon ball = Balloons.get(i); 
-            if (ball.popping()) {
+            if (ball.popping()) { //NEED something for bomb popping this assumes that the balloons are close to the bomb. 
               if (i+1 < Balloons.size()) {
                 Balloons.remove(i+1);
                 bLeft--; 
