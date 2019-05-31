@@ -8,7 +8,7 @@ class Catapult extends Tools{
     x = xcor;
     y = ycor;
     lives = 10;
-    img = loadImage("catapult.jpeg");
+    img = loadImage("catapult.png");
     rotation = 0;
     rate = 20;
     count = 0;

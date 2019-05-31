@@ -6,7 +6,8 @@ boolean selected = false;
 int toolPicked;  
 
 void infoSetup() {
-  fill(255,255,255); 
+  fill(#DEB887); 
+  //fill(255,255,255); 
   rect(540, 0, 460, 900);
   fill(0, 0, 0); 
   textSize(24); 
@@ -30,7 +31,7 @@ void infoSetup() {
   text("Tacks: $10", 700, 260); 
   image(tack, 625, 215, 75, 75);
   
-  PImage c = loadImage("catapult.jpeg");
+  PImage c = loadImage("catapult.png");
   text("Catapult: $100", 700, 330);
   image(c, 625, 290, 75, 75);
   
@@ -101,4 +102,8 @@ void mouseClicked() {
 }
 
 void displayEnd() {
+  
+}
+
+void displayWin(){
 }

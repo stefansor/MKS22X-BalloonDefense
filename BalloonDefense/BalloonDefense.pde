@@ -7,6 +7,9 @@ Tile[][] tiles = new Tile[10][10];
     }
     
     void draw(){
+      if (waves > 20) {
+        displayWin(); 
+      }
       if (life == 0) {
         displayEnd(); 
       }
