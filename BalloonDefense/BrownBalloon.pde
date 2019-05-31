@@ -1,7 +1,7 @@
-class BlackBalloon extends Balloon{
+class BrownBalloon extends Balloon{
   
-  BlackBalloon() {
-    super(1, 5, #000000, true, true, 2); 
+  BrownBalloon() {
+    super(1, 5, #A0522D, true, true, 2); 
   }
   
   void loseLife() {

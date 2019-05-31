@@ -1,6 +1,4 @@
 Tile[][] tiles = new Tile[10][10];
-
-BlackBalloon b = new BlackBalloon();
   
     void setup(){
       size(900, 600);
