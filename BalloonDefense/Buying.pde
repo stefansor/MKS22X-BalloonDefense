@@ -7,7 +7,6 @@ int toolPicked;
 
 void infoSetup() {
   fill(#DEB887); 
-  //fill(255,255,255); 
   rect(540, 0, 460, 900);
   fill(0, 0, 0); 
   textSize(24); 
@@ -102,8 +101,26 @@ void mouseClicked() {
 }
 
 void displayEnd() {
+  fill(#DEB887); 
+  rect(100, 100, 700, 400);
+  fill(0, 0, 0); 
   
+  textSize(60); 
+  text("Game Over", 300, 250); 
+  textSize(50); 
+  String message = "You survivied " + waves + " waves" ; 
+  text(message, 180, 320); 
 }
 
 void displayWin(){
+  fill(#DEB887); 
+  rect(100, 100, 700, 400);
+  fill(0, 0, 0); 
+  
+  textSize(60);
+  text("Congradulations!", 200, 250); 
+  text("The towers are safe!", 160, 320); 
+  textSize(50); 
+  String message = "You survivied " + waves + " waves" ; 
+  text(message, 180, 390); 
 }

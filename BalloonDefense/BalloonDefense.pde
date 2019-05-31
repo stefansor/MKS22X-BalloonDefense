@@ -10,7 +10,7 @@ Tile[][] tiles = new Tile[10][10];
       if (waves > 20) {
         displayWin(); 
       }
-      if (life == 0) {
+      else if (life == 0) {
         displayEnd(); 
       }
       else {
