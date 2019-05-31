@@ -1,14 +1,13 @@
 abstract class Balloon {
-  private int xcor, ycor, lives, speed, hue, type; 
+  private int xcor, ycor, lives, speed, hue; 
   private boolean explode, pop, popped, end;
   
-  Balloon(int l, int s, int c, boolean e, boolean p, int t) {
+  Balloon(int l, int s, int c, boolean e, boolean p) {
     xcor = 90; 
     ycor = 0;
     lives = l;
     speed = s;
     hue = c; 
-    type = t; 
     explode = e;
     pop = p; 
     popped = false; 
@@ -36,11 +35,7 @@ abstract class Balloon {
     Tile n = new Tile(0, 0, false, "up");
     return n;
   }
-  
-  int getType() {
-    return type; 
-  }
-  
+ 
   float getxcor() {
     return xcor; 
   }

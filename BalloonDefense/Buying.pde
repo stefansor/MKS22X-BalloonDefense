@@ -1,9 +1,9 @@
-int waves = 20; 
+int waves = 1; 
 int life = 100; 
 int bLeft = 100; 
 int coins = 200;
 boolean selected = false; 
-int toolPicked; 
+int toolPicked;  
 
 void infoSetup() {
   fill(255,255,255); 
@@ -83,19 +83,22 @@ void mouseClicked() {
       }
     }
   }
-  else if(toolPicked == 1 && !getTile(mouseX, mouseY).isTowerable()){
+  else if(coins >= 10 && toolPicked == 1 && !getTile(mouseX, mouseY).isTowerable()){
       Tack t = new Tack (mouseX, mouseY); 
       getTile(mouseX, mouseY).addTool(t); 
       coins -= 10;
   }
-  else if(toolPicked == 2 && getTile(mouseX, mouseY).isTowerable()){
+  else if(coins >= 100 && toolPicked == 2 && getTile(mouseX, mouseY).isTowerable()){
       Catapult c = new Catapult(mouseX, mouseY);
       getTile(mouseX, mouseY).addTool(c);
       coins -= 100;
   }
-  else if(toolPicked == 3 && !getTile(mouseX, mouseY).isTowerable()){
+  else if(coins >= 25 &&toolPicked == 3 && !getTile(mouseX, mouseY).isTowerable()){
       Bomb b = new Bomb (mouseX, mouseY); 
       getTile(mouseX, mouseY).addTool(b); 
       coins -= 25;
   }
+}
+
+void displayEnd() {
 }

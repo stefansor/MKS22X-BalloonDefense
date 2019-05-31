@@ -1,7 +1,7 @@
 class BrownBalloon extends Balloon{
   
   BrownBalloon() {
-    super(1, 5, #A0522D, true, true, 2); 
+    super(1, 5, #A0522D, true, true); 
   }
   
   void loseLife() {
@@ -10,6 +10,7 @@ class BrownBalloon extends Balloon{
       setPopped(); 
       for (int i = 0; i < 5; i++) {
         Balloons.add(new RegularBalloon()); 
+        bLeft++; 
       }
     }
   }
