@@ -26,3 +26,6 @@
 
 5/29/19
 - Stefan: I fixed the shift in the infoset function. Now the correct tool gets selected when pressed on its corresponding image. I also fixed the bug where if the tool would only be instantiate in areas that weren't part of the map. I added the changeisC() and isCatapult to tools. I deleted the imageMode(Center) from the display for catapult and bullet to prevent the rest of the map getting shifted as well. 
+
+5/30/2019
+- Vivien: First, I changed BlackBalloon to BrownBalloon. I added to BrownBalloon's popping so that the number of balloons left in a round changes as well. Then, I added waves. For each wave, different percentages of each balloon can be generated. Lastly, I added 2 different messages for when the player loses and when the player completes the game (20 waves).  
