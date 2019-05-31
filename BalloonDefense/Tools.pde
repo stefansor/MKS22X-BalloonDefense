@@ -64,4 +64,5 @@ abstract class Tools{
   abstract void display();
   abstract PImage getImage(); 
   abstract void shoot();
+  abstract ArrayList<Bullet> getBullets();
 }

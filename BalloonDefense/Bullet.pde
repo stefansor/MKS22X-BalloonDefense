@@ -24,12 +24,16 @@ class Bullet{
   
   
   void display(){
+    update();
+    pushMatrix();
+    translate(x, y);
    if(firing){
        rotate(rotation);
        rectMode(CENTER);
        fill(255);
-       rect(x, y, 5, 15);
+       rect(0, 0, 5, 15);
    }
+   popMatrix();
     
     
   }

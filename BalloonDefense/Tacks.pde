@@ -19,9 +19,12 @@ class Tack extends Tools{
     }
     
     void display(){
+      pushMatrix();
+      translate(getX(), getY());
       if (lives > 0) {
-        image(img, getX()-20, getY()-20, 40, 40);
+        image(img, 0-20, 0-20, 40, 40);
       }
+      popMatrix();
     } 
 
     boolean isCatapult(){
@@ -34,4 +37,10 @@ class Tack extends Tools{
     PImage getImage(){
      return img; 
     }
+    
+    ArrayList<Bullet> getBullets(){
+     ArrayList<Bullet> b = new ArrayList<Bullet>();
+     return b;
+    }
+
 }

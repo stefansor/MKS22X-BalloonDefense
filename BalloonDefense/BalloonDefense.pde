@@ -27,6 +27,7 @@ Tile[][] tiles = new Tile[10][10];
         for (int i = 0; i < Balloons.size(); i++) {
           if (Balloons.get(i).getLives() == 0) {
             Balloons.remove(i); 
+            coins += 2;
             bLeft--; 
           }
           if (Balloons.get(i).reachedEnd()) {

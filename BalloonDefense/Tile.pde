@@ -48,13 +48,20 @@ class Tile{
       }
       
       void display(){
-        image(img, x, y, 60, 60);
+        pushMatrix();
+        translate(x, y);
+        image(img, 0, 0, 60, 60);
+        popMatrix();
         for (Tools tool : weapons) {
            tool.display(); 
            if(tool.isCatapult()){
             tool.shoot(); 
+            for(Bullet bull : tool.getBullets()){
+              bull.display();
+            }
            }
         }
+        
       }
       
       void addTool(Tools t) {

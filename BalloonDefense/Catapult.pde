@@ -2,6 +2,7 @@ class Catapult extends Tools{
   private int rate, lives, count;
   private PImage img;
   private float x, y, rotation ;
+  private ArrayList<Bullet> bullets;
   
   
   Catapult(int xcor, int ycor){
@@ -13,6 +14,7 @@ class Catapult extends Tools{
     rate = 20;
     count = 0;
     changeisC();
+    bullets = new ArrayList<Bullet>();
   }
   
   
@@ -52,11 +54,14 @@ class Catapult extends Tools{
    return rotation; 
   }
   
+  ArrayList<Bullet> getBullets(){
+   return bullets; 
+  }
+  
   void shoot(){
     if(count % rate == 0){
       Bullet b = new Bullet(x, y, rotation);
-      b.update();
-      b.display();
+      bullets.add(b);
     }
   }
   
