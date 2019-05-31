@@ -1,0 +1,49 @@
+ArrayList<RegularBalloon> RegBalloons = new ArrayList<RegularBalloon>(); 
+int counter = 0; 
+Tile[][] tiles = new Tile[10][10];
+
+RegularBalloon r = new RegularBalloon();
+  
+    void setup(){
+      size(900, 600);
+      
+      setuptiles(); 
+    }
+    
+    void draw(){
+      infosetup(); 
+      
+      for(int i = 0; i < tiles.length; i++){
+        for(int j = 0; j < tiles[0].length; j++){
+         tiles[i][j].display(); 
+        }
+      }
+      
+      counter++; 
+      if (counter%10 == 0 && counter < 1000) {
+        RegularBalloon b = new RegularBalloon();
+        RegBalloons.add(b);  
+      }
+      
+      for (int i = 0; i < RegBalloons.size(); i++) {
+        if (RegBalloons.get(i).getLives() == 0) {
+          RegBalloons.remove(i); 
+          bLeft--; 
+        }
+        if (RegBalloons.get(i).reachedEnd()) {
+          life--;
+          RegBalloons.remove(i); 
+        }
+        else {
+          RegularBalloon rb = RegBalloons.get(i); 
+          rb.p          //rb.reachedEnd(); 
+opping(); 
+          rb.move(); 
+          rb.display(); 
+        }
+       }
+
+    }
+  
+  
+ 

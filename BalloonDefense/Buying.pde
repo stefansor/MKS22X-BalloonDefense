@@ -5,7 +5,7 @@ int coins = 200;
 boolean selected = false; 
 int toolPicked; 
 
-void infosetup() {
+void infoSetup() {
   fill(255,255,255); 
   rect(540, 0, 460, 900);
   fill(0, 0, 0); 

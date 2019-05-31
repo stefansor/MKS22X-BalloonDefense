@@ -1,4 +1,4 @@
-void setuptiles() {
+void setupTiles() {
       for (int r = 0; r < 10; r++) {
         for (int c = 0; c < 10; c++) {
           Tile t = new Tile(0, 0, true, "blank"); 

@@ -1,6 +1,6 @@
-class IronBalloons extends Balloon{
+class IronBalloon extends Balloon{
   
-  IronBalloons() {
+  IronBalloon() {
     super(3, 2, #A9A9A9, true, false); 
   }
   
