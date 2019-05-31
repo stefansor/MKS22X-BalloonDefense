@@ -25,13 +25,17 @@ Tile[][] tiles = new Tile[10][10];
         bSetup(); 
         
         for (int i = 0; i < Balloons.size(); i++) {
+          if (Balloons.size() > 0) {
+          }
           if (Balloons.get(i).getLives() == 0) {
             Balloons.remove(i); 
             bLeft--; 
+            i--; 
           }
           if (Balloons.size() > 0 && Balloons.get(i).reachedEnd()) {
             Balloons.remove(i); 
-            life--; 
+            life--;
+            i--; 
           }
           else {
             Balloon ball = Balloons.get(i); 
@@ -39,18 +43,22 @@ Tile[][] tiles = new Tile[10][10];
               if (i+1 < Balloons.size()) {
                 Balloons.remove(i+1);
                 bLeft--; 
+                i--; 
               }
               if (i+2 < Balloons.size()) {
                 Balloons.remove(i+2);
                 bLeft--; 
+                i--; 
               }
               if (i-1 > -1) {
                 Balloons.remove(i-1);
                 bLeft--; 
+                i--; 
               }
               if (i-2 > -1) {
                 Balloons.remove(i-2);
                 bLeft--; 
+                i--; 
               }
             }
             ball.move(); 
