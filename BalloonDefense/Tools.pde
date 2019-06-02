@@ -7,7 +7,7 @@ abstract class Tools{
   boolean isTouching(Balloon other) {
     float x = other.getxcor(); 
     float y = other.getycor(); 
-    if (x < xcor + 15 && x > xcor - 15 && y < ycor + 15 && y > ycor - 15) {
+    if (x < xcor + 20 && x > xcor - 20 && y < ycor + 20 && y > ycor - 20) {
       return true;
     }
     else {

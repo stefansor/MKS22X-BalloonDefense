@@ -19,6 +19,7 @@ Tile[][] tiles = new Tile[10][10];
         if (bLeft == 0) {
           waves++; 
           counter = 0; 
+          bLeft = 100; 
           coins += 250; //HOW MUCH DOES COINS INCREASE AT THE END OF A WAVE? 
         }
         

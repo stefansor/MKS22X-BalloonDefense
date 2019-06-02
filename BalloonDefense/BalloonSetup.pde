@@ -1,8 +1,8 @@
 ArrayList<Balloon> Balloons = new ArrayList<Balloon>(); 
 int counter = 0; 
 
-void bSetup() {
-   counter++; 
+void bSetup() { 
+   counter++;
    if (counter%10 == 0 && counter < 1010) {
      float pick = random(10); 
      if (waves < 3) { //Only has RegularBalloons
