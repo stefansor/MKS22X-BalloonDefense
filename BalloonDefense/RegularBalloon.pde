@@ -1,7 +1,7 @@
 class RegularBalloon extends Balloon {
   
   RegularBalloon() {
-    super(1, 3, #FF0000, true, true); 
+    super(1, 25, #FF0000, true, true); 
   }
   
   void loseLife() {
