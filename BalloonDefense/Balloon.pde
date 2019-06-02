@@ -1,5 +1,6 @@
 abstract class Balloon {
-  private int xcor, ycor, lives, speed, hue; 
+  private float xcor, ycor; 
+  private int lives, speed, hue; 
   private boolean popable, pop, popped, end;
   
   Balloon(int l, int s, int c, boolean p) {
@@ -34,7 +35,11 @@ abstract class Balloon {
     Tile n = new Tile(0, 0, false, "up");
     return n;
   }
- 
+  
+  void setXY(float x, float y) {
+    xcor = x;
+    ycor = y; 
+  }
   float getxcor() {
     return xcor; 
   }

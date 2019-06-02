@@ -43,7 +43,6 @@ Tile[][] tiles = new Tile[10][10];
             life--; 
           }
           else if(Balloons.size() > 0){
-            
             Balloon ball = Balloons.get(i); 
             if (ball.popping()) {
               if (i+1 < Balloons.size()) {

@@ -8,10 +8,12 @@ class BrownBalloon extends Balloon{
     setLives(getLives() - 1);
     if (getLives() == 0) {
       setPopped(); 
-      for (int i = 0; i < 5; i++) {
-        Balloons.add(new RegularBalloon()); 
-        bLeft++; 
-      }
+      Balloons.add(new RegularBalloon(getxcor()-10, getycor())); 
+      Balloons.add(new RegularBalloon(getxcor()-20, getycor()));
+      Balloons.add(new RegularBalloon(getxcor(), getycor())); 
+      Balloons.add(new RegularBalloon(getxcor()+10, getycor())); 
+      Balloons.add(new RegularBalloon(getxcor()+20, getycor())); 
+      bLeft += 4; 
     }
   }
 }
