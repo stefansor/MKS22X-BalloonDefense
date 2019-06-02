@@ -1,7 +1,7 @@
 class BrownBalloon extends Balloon{
   
   BrownBalloon() {
-    super(1, 5, #A0522D, true, true); 
+    super(1, 5, #A0522D, true); 
   }
   
   void loseLife() {

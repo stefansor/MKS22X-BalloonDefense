@@ -1,15 +1,14 @@
 abstract class Balloon {
   private int xcor, ycor, lives, speed, hue; 
-  private boolean explode, pop, popped, end;
+  private boolean popable, pop, popped, end;
   
-  Balloon(int l, int s, int c, boolean e, boolean p) {
+  Balloon(int l, int s, int c, boolean p) {
     xcor = 90; 
     ycor = 0;
     lives = l;
     speed = s;
     hue = c; 
-    explode = e;
-    pop = p; 
+    popable = p;
     popped = false; 
     end = false;
   }
@@ -63,11 +62,20 @@ abstract class Balloon {
       if (t.get(i).isBomb()) {
         hasbomb = true; 
       }
-      if (t.get(i).isTouching(this)) {
-        loseLife(); 
-        t.get(i).loseLife(); 
-        if (t.get(i).getLives() == 0) {
-          t.remove(i); 
+      if(t.get(i).isTouching(this)) {
+        if (t.get(i).isTack() && popable) { //if tool is a tack, only Regular and Brown balloons can pop
+          loseLife(); 
+          t.get(i).loseLife(); 
+          if (t.get(i).getLives() == 0) {
+            t.remove(i); 
+          }
+        }
+        else if (t.get(i).isBomb()){ //if tool is a bomb, all balloons can pop
+          loseLife(); 
+          t.get(i).loseLife(); 
+          if (t.get(i).getLives() == 0) {
+            t.remove(i); 
+          }
         }
       }
     }

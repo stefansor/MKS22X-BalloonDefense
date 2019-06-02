@@ -1,7 +1,7 @@
 class IronBalloon extends Balloon{
   
   IronBalloon() {
-    super(3, 2, #A9A9A9, true, false); 
+    super(3, 2, #A9A9A9, false); 
   }
   
   void loseLife() {

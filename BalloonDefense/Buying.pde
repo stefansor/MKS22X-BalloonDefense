@@ -1,4 +1,4 @@
-int waves = 1; 
+int waves = 15; 
 int life = 100; 
 int bLeft = 100; 
 int coins = 200;
