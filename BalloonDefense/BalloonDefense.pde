@@ -1,7 +1,10 @@
 Tile[][] tiles = new Tile[10][10];
+PFont font1, font2; 
   
     void setup(){
       size(900, 600);
+      font1 = loadFont("title.vlw"); 
+      font2 = loadFont("other.vlw");
       
       setupTiles(); 
     }
@@ -10,7 +13,7 @@ Tile[][] tiles = new Tile[10][10];
       if (waves > 20) {
         displayWin(); 
       }
-      else if (life == 0) {
+      else if (life <= 0) {
         displayEnd(); 
       }
       else {

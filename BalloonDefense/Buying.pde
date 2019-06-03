@@ -9,34 +9,35 @@ void infoSetup() {
   fill(#DEB887); 
   rect(540, 0, 460, 900);
   fill(0, 0, 0); 
-  textSize(24); 
   
-  text("Balloon Tower", 610, 30); 
-  text("Defense", 650, 60); 
+  textFont(font1); 
+  text("Balloon Tower", 610, 50); 
+  text("Defense", 670, 90); 
   
+  textFont(font2); 
   String w = "Waves: " + waves; 
-  text(w, 610, 90); 
+  text(w, 610, 130); 
   
   String l = "Lives Left: " + life; 
-  text(l, 610, 120); 
+  text(l, 610, 160); 
   
   String bl = "Balloons Left: " + bLeft; 
-  text(bl, 610, 150); 
+  text(bl, 610, 190); 
   
   String money = "Coins: " + coins; 
-  text(money, 610, 180);
+  text(money, 610, 220);
   
   PImage tack = loadImage("tacks.png");
-  text("Tacks: $10", 700, 260); 
-  image(tack, 625, 215, 75, 75);
+  text("Tacks: $10", 690, 285); 
+  image(tack, 610, 240, 75, 75);
   
   PImage c = loadImage("catapult.png");
-  text("Catapult: $100", 700, 330);
-  image(c, 625, 290, 75, 75);
+  text("Catapult: $100", 670, 370);
+  image(c, 605, 315, 75, 75);
   
   PImage bomb = loadImage("bomb.png");
-  text("Bombs: $25", 700, 420); 
-  image(bomb, 630, 370, 75, 75);
+  text("Bombs: $25", 690, 450); 
+  image(bomb, 615, 390, 75, 75);
 }
 
   Tile getTile(int xcor, int ycor){
@@ -55,7 +56,7 @@ void infoSetup() {
 void mouseClicked() {
   if (mouseX > 600) {
 
-    if (mouseX > 625 && mouseX < 700 && mouseY > 215 && mouseY < 290 ) {
+    if (mouseX >= 610 && mouseX <= 685 && mouseY >= 240 && mouseY <= 315 ) {
       if(!selected){
         toolPicked = 1; //tacks 
         selected = true;
@@ -64,7 +65,7 @@ void mouseClicked() {
         selected = false;
       }
     }
-    if(mouseX > 625 && mouseX < 700 && mouseY > 290 && mouseY < 365 ){
+    if(mouseX >= 605 && mouseX <= 680 && mouseY >= 315 && mouseY <= 390 ){
       if(!selected){
         toolPicked = 2; //catapult
         selected = true;
@@ -73,7 +74,7 @@ void mouseClicked() {
        selected = false; 
       }
     }
-    if(mouseX > 630 && mouseX < 705 && mouseY > 370 && mouseY < 445 ){
+    if(mouseX >= 615 && mouseX <= 690 && mouseY >= 390 && mouseY < 465 ){
       if(!selected){
         toolPicked = 3; //bomb
         selected = true;

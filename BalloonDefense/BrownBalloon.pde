@@ -1,9 +1,14 @@
 class BrownBalloon extends Balloon{
   
   BrownBalloon() {
-    super(1, 5, #A0522D, true); 
+    super(2, 5, #A0522D, true); 
   }
   
+  BrownBalloon(float x, float y) {
+    super(1, 4, #A0522D, true); 
+    setXY(x, y); 
+  }
+    
   void loseLife() {
     setLives(getLives() - 1);
     if (getLives() == 0) {
