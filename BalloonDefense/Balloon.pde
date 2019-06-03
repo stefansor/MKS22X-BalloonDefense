@@ -59,14 +59,10 @@ abstract class Balloon {
   void setPopped() {
     popped = true; 
   }
-  
-  boolean popping() {
-    boolean hasbomb = false; 
+   
+  void popping(int x) {
     ArrayList<Tools> t = getTile().getList(); 
     for (int i = 0; i < t.size(); i++) {
-      if (t.get(i).isBomb()) {
-        hasbomb = true; 
-      }
       if(t.get(i).isTouching(this)) {
         if (t.get(i).isTack() && popable) { //if tool is a tack, only Regular and Brown balloons can pop
           loseLife(); 
@@ -76,15 +72,20 @@ abstract class Balloon {
           }
         }
         else if (t.get(i).isBomb()){ //if tool is a bomb, all balloons can pop
-          loseLife(); 
-          t.get(i).loseLife(); 
-          if (t.get(i).getLives() == 0) {
-            t.remove(i); 
+          loseLife();  
+          int last = x+5; 
+          while (x < last) {
+            if (x < Balloons.size() && t.get(i).isTouching(Balloons.get(x))) {
+              Balloons.get(x).loseLife(); 
+            }
+            x++; 
           }
+          t.get(i).loseLife(); 
+          t.remove(i);
         }
       }
     }
-    return hasbomb; 
+    
   }
   
   boolean reachedEnd() {

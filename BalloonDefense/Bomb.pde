@@ -21,7 +21,7 @@ class Bomb extends Tools{
   boolean isTouching(Balloon other) {
     float x = other.getxcor(); 
     float y = other.getycor(); 
-    if (x < getX() + 150 && x > getX() - 150 && y < getY() + 150 && y > getY() - 150) {
+    if (x < getX() + 120 && x > getX() - 120 && y < getY() + 120 && y > getY() - 120) {
       return true;
     }
     else {

@@ -20,7 +20,7 @@ Tile[][] tiles = new Tile[10][10];
           waves++; 
           counter = 0; 
           bLeft = 100; 
-          coins += 250; //HOW MUCH DOES COINS INCREASE AT THE END OF A WAVE? 
+          coins += 250; 
         }
         
         for(int i = 0; i < tiles.length; i++){
@@ -32,45 +32,34 @@ Tile[][] tiles = new Tile[10][10];
         bSetup(); 
         
         for (int i = 0; i < Balloons.size(); i++) {
+          //System.out.print(i + " "); 
           if (Balloons.get(i).getLives() == 0) {
             Balloons.remove(i); 
+            i--;
             bLeft--; 
             coins +=2;
           }
+          //System.out.print(i+ " "); 
           if (Balloons.size() > 0 && Balloons.get(i).reachedEnd()) {
             Balloons.remove(i); 
+            i--;
             bLeft--;
             life--; 
           }
-          else if(Balloons.size() > 0){
+          //System.out.print(i+ " "); 
+          if(Balloons.size() > 0){
             Balloon ball = Balloons.get(i); 
-            if (ball.popping()) {
-              if (i+1 < Balloons.size()) {
-                Balloons.remove(i+1);
-                bLeft--; 
-                coins +=2;
-              }
-              if (i+2 < Balloons.size()) {
-                Balloons.remove(i+2);
-                bLeft--; 
-                coins +=2;
-              }
-              if (i-1 > -1) {
-                Balloons.remove(i-1);
-                bLeft--; 
-                coins +=2;
-              }
-              if (i-2 > -1) {
-                Balloons.remove(i-2);
-                bLeft--; 
-                coins +=2;
-              }
+            if (i > 2) {
+              ball.popping(i-2); 
+            }
+            else {
+              ball.popping(0); 
             }
             ball.move(); 
             ball.display(); 
           }
+          //System.out.println(); 
         }
-        
       }
       
     }
