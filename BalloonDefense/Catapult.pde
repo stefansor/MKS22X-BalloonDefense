@@ -2,6 +2,7 @@ class Catapult extends Tools{
   private int rate, lives, count;
   private PImage img;
   private float x, y, rotation ;
+  private ArrayList<Bullet> bullets;
   
   
   Catapult(int xcor, int ycor){
@@ -13,10 +14,21 @@ class Catapult extends Tools{
     rate = 20;
     count = 0;
     changeisC();
+    bullets = new ArrayList<Bullet>();
+  }
+  
+  void update(){
+   for(int i = 0; i < bullets.size(); i++){
+    if(!bullets.get(i).isOnMap()){
+      bullets.remove(i);
+      i--;
+    }
+   }
   }
   
   
   void display(){
+    update();
     pushMatrix();
      translate(x, y);
      rotation = atan2(mouseY-height/2, mouseX-width/2);
@@ -26,6 +38,10 @@ class Catapult extends Tools{
      imageMode(CORNER);
     popMatrix();
     count++;
+    for(Bullet bu : bullets){
+       bu.update();
+       bu.display();
+     }
   }
   
   int getLives(){
@@ -55,8 +71,7 @@ class Catapult extends Tools{
   void shoot(){
     if(count % rate == 0){
       Bullet b = new Bullet(x, y, rotation);
-      b.update();
-      b.display();
+      bullets.add(b);
     }
   }
   
