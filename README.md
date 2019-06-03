@@ -29,3 +29,6 @@
 
 5/30/2019
 - Vivien: First, I changed BlackBalloon to BrownBalloon. I added to BrownBalloon's popping so that the number of balloons left in a round changes as well. Then, I added waves. For each wave, different percentages of each balloon can be generated. Lastly, I added 2 different messages for when the player loses and when the player completes the game (20 waves).  
+
+6/2/2019
+- Vivien: I changed popping so that only RegularBalloons and BrownBalloons can be popped. I also changed how bombs are exploded. Instead of exploding the surrounding Balloons in the ArrayList, bombs now explode balloons based on distance. To make the game more interesting, I changed IronBalloons so that when they explode, they spawn a BrownBalloon. For BrownBalloons, I changed how they pop. When they pop, they spawn 5 RegularBalloons that are slightly apart so that they can be seen. Lastly, I created and implemented a new font for the side panel.  
