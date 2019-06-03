@@ -42,5 +42,14 @@ class Bomb extends Tools{
   PImage getImage(){
    return img; 
   }
+  ArrayList<Bullet> getBullets(){
+     ArrayList<Bullet> n = new ArrayList<Bullet>();
+     return n;
+  }
+  
+  Bullet getbullet(int f){
+     ArrayList<Bullet> n = new ArrayList<Bullet>();
+     return n.get(f);
+  }
   
 }

@@ -39,6 +39,17 @@ class Bullet{
    return firing; 
   }
   
+  boolean touching(Balloon other) {
+    float xcor = other.getxcor(); 
+    float ycor = other.getycor(); 
+    if (dist(x, y, xcor, ycor) < 20) {
+      return true;
+    }
+    else {
+      return false; 
+    }
+  }
+  
   
   
   

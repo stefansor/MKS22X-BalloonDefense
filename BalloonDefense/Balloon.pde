@@ -84,6 +84,18 @@ abstract class Balloon {
           t.remove(i);
         }
       }
+      else if(t.get(i).isCatapult()){  // if tool is catapult check the bullets that can only pop popable balloons
+        println("cat");
+         for(int j = 0; j < t.get(i).getBullets().size(); j++){
+           println("bullet");
+          if(t.get(i).getbullet(j).touching(this) && popable){
+            System.out.println("bullet is touching");
+            loseLife();
+          }
+         }
+          
+          
+      }
     }
     
   }

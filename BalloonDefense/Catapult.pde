@@ -68,6 +68,14 @@ class Catapult extends Tools{
    return rotation; 
   }
   
+  ArrayList<Bullet> getBullets(){
+   return bullets; 
+  }
+  
+  Bullet getbullet(int f){
+   return bullets.get(f); 
+  }
+  
   void shoot(){
     if(count % rate == 0){
       Bullet b = new Bullet(x, y, rotation);
