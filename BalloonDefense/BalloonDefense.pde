@@ -56,6 +56,7 @@ PFont font1, font2;
             else {
               ball.popping(0); 
             }
+            ball.shot();
             ball.move(); 
             ball.display(); 
           }

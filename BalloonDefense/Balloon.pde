@@ -84,20 +84,26 @@ abstract class Balloon {
           t.remove(i);
         }
       }
-      else if(t.get(i).isCatapult()){  // if tool is catapult check the bullets that can only pop popable balloons
-        println("cat");
-         for(int j = 0; j < t.get(i).getBullets().size(); j++){
-           println("bullet");
-          if(t.get(i).getbullet(j).touching(this) && popable){
-            System.out.println("bullet is touching");
-            loseLife();
-          }
-         }
-          
-          
-      }
     }
     
+  }
+  
+  
+  void shot(){ //checking to see if the balloon is getting hit by any of the bullets on screen
+    for(int i = 0; i < tiles.length; i++){
+     for(int j = 0; j < tiles[i].length; j++){
+      ArrayList<Tools> t = tiles[i][j].getList();
+      for(int h = 0; h < t.size(); h++){
+       if(t.get(h).isCatapult()){
+         for(int k = 0; k < t.get(h).getBullets().size(); k++){
+           if(t.get(h).getbullet(k).touching(this) && popable){
+             loseLife();
+           }
+         }
+       }
+      }
+     }
+    }
   }
   
   boolean reachedEnd() {
