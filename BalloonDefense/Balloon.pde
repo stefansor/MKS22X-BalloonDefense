@@ -73,7 +73,7 @@ abstract class Balloon {
         }
         else if (t.get(i).isBomb()){ //if tool is a bomb, all balloons can pop
           loseLife();  
-          int last = x+5; 
+          int last = x+6; 
           while (x < last) {
             if (x < Balloons.size() && t.get(i).isTouching(Balloons.get(x))) {
               Balloons.get(x).loseLife(); 

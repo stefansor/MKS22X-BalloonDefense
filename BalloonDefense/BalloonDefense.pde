@@ -32,25 +32,23 @@ Tile[][] tiles = new Tile[10][10];
         bSetup(); 
         
         for (int i = 0; i < Balloons.size(); i++) {
-          //System.out.print(i + " "); 
+          System.out.print(i + " "); 
           if (Balloons.get(i).getLives() == 0) {
             Balloons.remove(i); 
             i--;
             bLeft--; 
-            coins +=2;
+            coins +=5;
           }
-          //System.out.print(i+ " "); 
-          if (Balloons.size() > 0 && Balloons.get(i).reachedEnd()) {
+          else if (Balloons.size() > 0 && Balloons.get(i).reachedEnd()) {
             Balloons.remove(i); 
             i--;
             bLeft--;
             life--; 
           }
-          //System.out.print(i+ " "); 
-          if(Balloons.size() > 0){
+          else if(Balloons.size() > 0){
             Balloon ball = Balloons.get(i); 
-            if (i > 2) {
-              ball.popping(i-2); 
+            if (i > 3) {
+              ball.popping(i-3); 
             }
             else {
               ball.popping(0); 
@@ -58,7 +56,7 @@ Tile[][] tiles = new Tile[10][10];
             ball.move(); 
             ball.display(); 
           }
-          //System.out.println(); 
+          System.out.println(); 
         }
       }
       
