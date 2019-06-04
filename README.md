@@ -27,7 +27,7 @@ Prevent the balloons from reaching the end of the path by buying tools to pop th
 
 - 5/21/2019
   - Vivien: During the first half of class, Stefan and I talked about how we could set up the map and write a getTile to identify which tile the balloon is on. Then, I started to work on displaying coins and adding tools. I wrote the abstract class Tools and am in the process of writing Tack. I also experimented a little with Stefan's code. Tomorrow, we need to merge the tiles with master and make sure RegularBalloons works on the map. Oncce we confirm that, we can focus on completing the additional displays and Tack.   
-- Stefan: At home I wrote getTile and finished the map design. I integrated some of Vivien's code to see how the balloon will start to interact with the tiles and if the getTile works. I also started to write the move function and will finish later tomorrow.
+  - Stefan: At home I wrote getTile and finished the map design. I integrated some of Vivien's code to see how the balloon will start to interact with the tiles and if the getTile works. I also started to write the move function and will finish later tomorrow.
 
 - 5/23/2019
   - Vivien: I worked on completing move so that it smoothly manuvers balloons around corners. I also tried to experiment and find ways to record the last tile to stop the balloon movement. Other than adding an if statement to move to stop balloons at the end, Balloons and RegularBalloons seem complete.
@@ -41,7 +41,7 @@ Prevent the balloons from reaching the end of the path by buying tools to pop th
 
 - 5/28/2019
   - Vivien: I fixed how livesLeft was change. Because I didn't remove a balloon from the list of balloons in the game when it reached the finish line, the balloon continued to move even though it was not displayed. This cause livesLeft to become a negative number. Afterwards, I wrote the bomb class. Then, I added to mouseClicked() to include when a bomb is purchased and placed. I am working on getting bombs to explode the balloons surrounding it.  
-   - Stefan: I worked on the catapult and bullet class. I tried to get the catapult to shoot a bullet but it doesn't seem to visually move outside the image of just the catapult. I merged to master and rearranged the text and tool generater to have both the bomb and catapult in the store section. The map, upon merging, for some reason is moved up and to the right screwing with the visualization of the tiles but not their paths apparently. I will try to fix this later in school.
+  - Stefan: I worked on the catapult and bullet class. I tried to get the catapult to shoot a bullet but it doesn't seem to visually move outside the image of just the catapult. I merged to master and rearranged the text and tool generater to have both the bomb and catapult in the store section. The map, upon merging, for some reason is moved up and to the right screwing with the visualization of the tiles but not their paths apparently. I will try to fix this later in school.
 
 - 5/29/19
   - Stefan: I fixed the shift in the infoset function. Now the correct tool gets selected when pressed on its corresponding image. I also fixed the bug where if the tool would only be instantiate in areas that weren't part of the map. I added the changeisC() and isCatapult to tools. I deleted the imageMode(Center) from the display for catapult and bullet to prevent the rest of the map getting shifted as well. 
