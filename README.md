@@ -7,7 +7,7 @@ The mission is to defend the tower from the incoming waves of balloons. Each wav
 - Red Balloons: Have 1 life and can be popped using tacks, bombs or bullets. 
 - Brown Balloons: Have 2 lives and can be popped by tacks, bombs or bullets. 
   - When  Brown Balloons are popped, they spawn 5 Red Balloons 
--Iron Balloons: Have 1 life and can only be popped by bombs
+- Iron Balloons: Have 1 life and can only be popped by bombs
   - When Iron Balloons are popped, they spawn a Brown Balloon.
 
 ###### Types of Tools
