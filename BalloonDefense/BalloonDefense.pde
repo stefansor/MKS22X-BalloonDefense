@@ -40,7 +40,7 @@ PFont font1, font2;
             Balloons.remove(i); 
             i--;
             bLeft--; 
-            coins +=5;
+            coins +=2;
           }
           else if (Balloons.size() > 0 && Balloons.get(i).reachedEnd()) {
             Balloons.remove(i); 

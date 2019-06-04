@@ -1,4 +1,4 @@
-int waves = 15; 
+int waves = 1; 
 int life = 100; 
 int bLeft = 100; 
 int coins = 200;
@@ -38,6 +38,8 @@ void infoSetup() {
   PImage bomb = loadImage("bomb.png");
   text("Bombs: $25", 690, 450); 
   image(bomb, 615, 390, 75, 75);
+  
+  
 }
 
   Tile getTile(int xcor, int ycor){
@@ -56,7 +58,7 @@ void infoSetup() {
 void mouseClicked() {
   if (mouseX > 600) {
 
-    if (mouseX >= 610 && mouseX <= 685 && mouseY >= 240 && mouseY <= 315 ) {
+    if (/*mouseX >= 610 && mouseX <= 685 && */ mouseY >= 240 && mouseY <= 315 ) {
       if(!selected){
         toolPicked = 1; //tacks 
         selected = true;
@@ -65,7 +67,7 @@ void mouseClicked() {
         selected = false;
       }
     }
-    if(mouseX >= 605 && mouseX <= 680 && mouseY >= 315 && mouseY <= 390 ){
+    if(/*mouseX >= 605 && mouseX <= 680 &&*/ mouseY >= 315 && mouseY <= 390 ){
       if(!selected){
         toolPicked = 2; //catapult
         selected = true;
@@ -74,7 +76,7 @@ void mouseClicked() {
        selected = false; 
       }
     }
-    if(mouseX >= 615 && mouseX <= 690 && mouseY >= 390 && mouseY < 465 ){
+    if(/*mouseX >= 615 && mouseX <= 690 &&*/ mouseY >= 390 && mouseY < 465 ){
       if(!selected){
         toolPicked = 3; //bomb
         selected = true;
@@ -83,6 +85,7 @@ void mouseClicked() {
        selected = false; 
       }
     }
+    
   }
   else if(coins >= 10 && toolPicked == 1 && !getTile(mouseX, mouseY).isTowerable()){
       Tack t = new Tack (mouseX, mouseY); 
@@ -94,6 +97,7 @@ void mouseClicked() {
       getTile(mouseX, mouseY).addTool(c);
       coins -= 100;
   }
+  
   else if(coins >= 25 &&toolPicked == 3 && !getTile(mouseX, mouseY).isTowerable()){
       Bomb b = new Bomb (mouseX, mouseY); 
       getTile(mouseX, mouseY).addTool(b); 

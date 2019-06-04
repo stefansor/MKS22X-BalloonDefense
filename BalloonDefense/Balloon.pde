@@ -96,8 +96,9 @@ abstract class Balloon {
       for(int h = 0; h < t.size(); h++){
        if(t.get(h).isCatapult()){
          for(int k = 0; k < t.get(h).getBullets().size(); k++){
-           if(t.get(h).getbullet(k).touching(this) && popable){
+           if(t.get(h).getbullet(k).touching(this) && popable && t.get(h).getbullet(k).getLives() > 0){
              loseLife();
+             t.get(h).getbullet(k).loseLife();
            }
          }
        }

@@ -8,14 +8,16 @@ class Catapult extends Tools{
   Catapult(int xcor, int ycor){
     x = xcor;
     y = ycor;
-    lives = 10;
+    lives = 1;
     img = loadImage("catapult.png");
     rotation = 0;
-    rate = 20;
+    rate = 40;
     count = 0;
     changeisC();
     bullets = new ArrayList<Bullet>();
   }
+  
+  
   
   void update(){
    for(int i = 0; i < bullets.size(); i++){
@@ -31,8 +33,7 @@ class Catapult extends Tools{
     update();
     pushMatrix();
      translate(x, y);
-     rotation = atan2(mouseY-height/2, mouseX-width/2);
-     rotate(rotation);
+     //rotate(rotation);
      imageMode(CENTER);
      image(img, 0, 0, 40, 40); 
      imageMode(CORNER);
@@ -78,7 +79,7 @@ class Catapult extends Tools{
   
   void shoot(){
     if(count % rate == 0){
-      Bullet b = new Bullet(x, y, rotation);
+      Bullet b = new Bullet(x, y, rotation - PI/2);
       bullets.add(b);
     }
   }
