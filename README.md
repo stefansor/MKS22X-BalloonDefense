@@ -9,6 +9,7 @@ The mission is to defend the tower from the incoming waves of balloons. Each wav
   - When  Brown Balloons are popped, they spawn 5 Red Balloons 
 -Iron Balloons: Have 1 life and can only be popped by bombs
   - When Iron Balloons are popped, they spawn a Brown Balloon.
+
 ###### Types of Tools
 - Tacks:  Can be used to get rid of 5 lives 
 - Bombs: Can be used to get rid of 1 life of all balloons surrounding it 
@@ -28,9 +29,9 @@ Prevent the balloons from reaching the end of the path by buying tools to pop th
   - Vivien: During the first half of class, Stefan and I talked about how we could set up the map and write a getTile to identify which tile the balloon is on. Then, I started to work on displaying coins and adding tools. I wrote the abstract class Tools and am in the process of writing Tack. I also experimented a little with Stefan's code. Tomorrow, we need to merge the tiles with master and make sure RegularBalloons works on the map. Oncce we confirm that, we can focus on completing the additional displays and Tack.   
 - Stefan: At home I wrote getTile and finished the map design. I integrated some of Vivien's code to see how the balloon will start to interact with the tiles and if the getTile works. I also started to write the move function and will finish later tomorrow.
 
-5/23/2019
-- Vivien: I worked on completing move so that it smoothly manuvers balloons around corners. I also tried to experiment and find ways to record the last tile to stop the balloon movement. Other than adding an if statement to move to stop balloons at the end, Balloons and RegularBalloons seem complete.
-- Stefan: I worked on generating the tacks to see if they could be placed on the path exclusively. I used some triangle to create a small tack like object that we latter will replace with an image.
+- 5/23/2019
+  - Vivien: I worked on completing move so that it smoothly manuvers balloons around corners. I also tried to experiment and find ways to record the last tile to stop the balloon movement. Other than adding an if statement to move to stop balloons at the end, Balloons and RegularBalloons seem complete.
+  - Stefan: I worked on generating the tacks to see if they could be placed on the path exclusively. I used some triangle to create a small tack like object that we latter will replace with an image.
 
 - 5/24/2019
   - Vivien: I fixed move so that the balloons pop when they reach the finish line. Then, I experimented with mouseClick(), mouseX and mouseY to figure out how to place the tacks on the map. I also experimented with printing text to show the information on the side.
