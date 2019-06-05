@@ -54,50 +54,25 @@ abstract class Tools{
     ycor = y; 
   }
   
-  int getLives() { //NEED TO TALK ABOUT THIS
+  int getLives() { 
     return 1; 
   }
   
-  void loseLife() { //NEED TO TALK ABOUT THIS
+  void loseLife() { 
   }
   
-<<<<<<< HEAD
   ArrayList<Bullet> getBullets(){
-     ArrayList<Bullet> n = new ArrayList<Bullet>();
-     return n;
-    }
-    
-    Bullet getbullet(int f){
-     ArrayList<Bullet> n = new ArrayList<Bullet>();
-     return n.get(f);
-    }
-    
-    void shoot(){
-    
-    }
-  
-  abstract void display();
-  //abstract void shoot();
-  //abstract ArrayList<Bullet> getBullets(); // These last three functions function as place holders 
-  //abstract Bullet getbullet(int f); // Only truly written for catapult and included in abstract Tools due to tool arraylist for each tile
-=======
-  void shoot(){}
-
-  ArrayList<Bullet> getBullets(){
-     ArrayList<Bullet> n = new ArrayList<Bullet>();
-     return n;
+    ArrayList<Bullet> n = new ArrayList<Bullet>();
+    return n;
   }
-  
+    
   Bullet getbullet(int f){
-     ArrayList<Bullet> n = new ArrayList<Bullet>();
-     return n.get(f);
+    ArrayList<Bullet> n = new ArrayList<Bullet>();
+    return n.get(f);
   }
+    
+  void shoot(){}
   
   abstract void display();
-  /*
-  abstract void shoot();
-  abstract ArrayList<Bullet> getBullets();
-  abstract Bullet getbullet(int f);
-  */
->>>>>>> design
+
 }
