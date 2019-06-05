@@ -31,6 +31,7 @@ class Bullet{
        rectMode(CENTER);
        fill(0, 0, 0);
        rect(0, 0, 5, 15);
+       rectMode(CORNER);
      popMatrix();
    } 
   }
