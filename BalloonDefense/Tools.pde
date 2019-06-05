@@ -61,9 +61,22 @@ abstract class Tools{
   void loseLife() { //NEED TO TALK ABOUT THIS
   }
   
+  void shoot(){}
+
+  ArrayList<Bullet> getBullets(){
+     ArrayList<Bullet> n = new ArrayList<Bullet>();
+     return n;
+  }
+  
+  Bullet getbullet(int f){
+     ArrayList<Bullet> n = new ArrayList<Bullet>();
+     return n.get(f);
+  }
+  
   abstract void display();
-  abstract PImage getImage(); 
+  /*
   abstract void shoot();
   abstract ArrayList<Bullet> getBullets();
   abstract Bullet getbullet(int f);
+  */
 }

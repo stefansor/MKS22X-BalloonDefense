@@ -1,8 +1,7 @@
-int waves = 15; 
+int waves = 1; 
 int life = 100; 
 int bLeft = 100; 
 int coins = 200;
-boolean selected = false; 
 int toolPicked;  
 
 void infoSetup() {
@@ -57,31 +56,13 @@ void mouseClicked() {
   if (mouseX > 600) {
 
     if (mouseX >= 610 && mouseX <= 685 && mouseY >= 240 && mouseY <= 315 ) {
-      if(!selected){
-        toolPicked = 1; //tacks 
-        selected = true;
-      }
-      else{
-        selected = false;
-      }
+      toolPicked = 1; //tacks 
     }
     if(mouseX >= 605 && mouseX <= 680 && mouseY >= 315 && mouseY <= 390 ){
-      if(!selected){
-        toolPicked = 2; //catapult
-        selected = true;
-      }
-      else{
-       selected = false; 
-      }
+      toolPicked = 2; //catapult
     }
     if(mouseX >= 615 && mouseX <= 690 && mouseY >= 390 && mouseY < 465 ){
-      if(!selected){
-        toolPicked = 3; //bomb
-        selected = true;
-      }
-      else{
-       selected = false; 
-      }
+      toolPicked = 3; //bomb
     }
   }
   else if(coins >= 10 && toolPicked == 1 && !getTile(mouseX, mouseY).isTowerable()){
