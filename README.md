@@ -55,3 +55,6 @@ Prevent the balloons from reaching the end of the path by buying tools to pop th
 
 6/3/2019
 - Stefan: I changed the catapult to shoot only forward and removed its rotation as it was causing more problems. I also fixed the bounds for the selection of a tool to make it easier. Previously, you had to hit the direct center of the image essentially to select the tool. I also added shot() to balloons which like, popping, checks if the balloon is currently being shot by any bullet on the screen.
+
+6/4/2019
+- Vivien: I tried to find why the information on the side panel was overlapping. ALthough I was not able to figure out why the problem was occuring, Stefan did. Then, I worked on adding to the side panel.  
