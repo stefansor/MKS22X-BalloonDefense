@@ -1,13 +1,13 @@
 class Catapult extends Tools{
   private int rate, lives, count;
   private PImage img;
-  private float x, y, rotation ;
+  private float rotation ;
   private ArrayList<Bullet> bullets;
   
   
   Catapult(int xcor, int ycor){
-    x = xcor;
-    y = ycor;
+    setX(xcor);
+    setY(ycor);
     lives = 10;
     img = loadImage("catapult.png");
     rotation = 0;
@@ -30,7 +30,7 @@ class Catapult extends Tools{
   void display(){
     update();
     pushMatrix();
-     translate(x, y);
+     translate(getX(), getY());
      rotation = atan2(mouseY-height/2, mouseX-width/2);
      rotate(rotation);
      imageMode(CENTER);
@@ -43,25 +43,7 @@ class Catapult extends Tools{
        bu.display();
      }
   }
-  
-  int getLives(){
-    return lives;
-  }
-  
-  void loseLife(){
-   lives--; 
-  }
-  
 
-  
-  float getX(){
-   return x; 
-  }
-  
-  float getY(){
-   return y; 
-  }
-  
   float getRot(){
    return rotation; 
   }
@@ -76,7 +58,7 @@ class Catapult extends Tools{
   
   void shoot(){
     if(count % rate == 0){
-      Bullet b = new Bullet(x, y, rotation);
+      Bullet b = new Bullet(getX(), getY(), rotation);
       bullets.add(b);
     }
   }
