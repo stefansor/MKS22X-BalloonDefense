@@ -1,10 +1,12 @@
 Tile[][] tiles = new Tile[10][10];
 PFont font1, font2; 
+PImage sign; 
   
     void setup(){
       size(900, 600);
       font1 = loadFont("title.vlw"); //Fonts for side panel
       font2 = loadFont("other.vlw");
+      sign = loadImage("Sign.png");
       
       setupTiles(); //sets up tiles for map
     }
