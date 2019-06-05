@@ -1,13 +1,13 @@
 void setupTiles() {
       for (int r = 0; r < 10; r++) {
         for (int c = 0; c < 10; c++) {
-          Tile t = new Tile(0, 0, true, "blank"); 
+          Tile t = new Tile(0, 0, true, "blank"); //default tiles are set up with no path visible and are mutated according to coordinates
           tiles[r][c] = t; 
         }
       }
 
       for(int i = 0; i < tiles.length; i++){
-        for(int j = 0; j < tiles[0].length; j++){
+        for(int j = 0; j < tiles[0].length; j++){ //directions of path tiles are jpegs themselves
           
           tiles[i][j].setX(j*60);
           tiles[i][j].setY(i*60);

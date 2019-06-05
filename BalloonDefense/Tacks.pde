@@ -30,10 +30,7 @@ class Tack extends Tools{
     void shoot(){
     
     }
-    
-    PImage getImage(){
-     return img; 
-    }
+   
     
     ArrayList<Bullet> getBullets(){
      ArrayList<Bullet> n = new ArrayList<Bullet>();

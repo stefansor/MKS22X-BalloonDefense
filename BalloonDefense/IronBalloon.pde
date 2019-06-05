@@ -7,6 +7,6 @@ class IronBalloon extends Balloon{
   void loseLife() {
     setLives(getLives() - 1);
     setPopped();
-    Balloons.add(new BrownBalloon(getxcor(), getycor())); 
-  }
+    Balloons.add(new BrownBalloon(getxcor(), getycor())); //when popped generates a brown balloon 
+  } //demonstrates layering
 }

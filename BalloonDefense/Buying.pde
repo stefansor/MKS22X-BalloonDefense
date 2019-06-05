@@ -6,6 +6,10 @@ boolean selected = false;
 int toolPicked;  
 
 void infoSetup() {
+  //right side of the playing screen
+  //shows lives, currency, wave, and balloons left
+  //also shows prices of each tool 
+  
   fill(#DEB887); 
   rect(540, 0, 460, 900);
   fill(0, 0, 0); 
@@ -40,6 +44,7 @@ void infoSetup() {
   image(bomb, 615, 390, 75, 75);
 }
 
+//returns tile with xcor and ycor
   Tile getTile(int xcor, int ycor){
     for(int i = 0; i < tiles.length ; i++){
      for(int j = 0; j < tiles[0].length; j++){
@@ -53,10 +58,13 @@ void infoSetup() {
     return n;
   }
 
+//initial click on right side of playing screen selects which tool given sufficient currency
+//second and preceding clicks on map in appropriate areas for each tool instantiate the selected tool
+
 void mouseClicked() {
   if (mouseX > 600) {
 
-    if (mouseX >= 610 && mouseX <= 685 && mouseY >= 240 && mouseY <= 315 ) {
+    if (/*mouseX >= 610 && mouseX <= 685 &&*/ mouseY >= 240 && mouseY <= 315 ) {
       if(!selected){
         toolPicked = 1; //tacks 
         selected = true;
@@ -65,7 +73,7 @@ void mouseClicked() {
         selected = false;
       }
     }
-    if(mouseX >= 605 && mouseX <= 680 && mouseY >= 315 && mouseY <= 390 ){
+    if(/*mouseX >= 605 && mouseX <= 680 &&*/ mouseY >= 315 && mouseY <= 390 ){
       if(!selected){
         toolPicked = 2; //catapult
         selected = true;
@@ -74,7 +82,7 @@ void mouseClicked() {
        selected = false; 
       }
     }
-    if(mouseX >= 615 && mouseX <= 690 && mouseY >= 390 && mouseY < 465 ){
+    if(/*mouseX >= 615 && mouseX <= 690 &&*/ mouseY >= 390 && mouseY < 465 ){
       if(!selected){
         toolPicked = 3; //bomb
         selected = true;
@@ -101,6 +109,8 @@ void mouseClicked() {
   }
 }
 
+
+//end message that appears when player has no lives
 void displayEnd() {
   fill(#DEB887); 
   rect(100, 100, 700, 400);
@@ -113,6 +123,8 @@ void displayEnd() {
   text(message, 180, 320); 
 }
 
+
+//end image when player survives all the waves
 void displayWin(){
   fill(#DEB887); 
   rect(100, 100, 700, 400);

@@ -14,7 +14,7 @@ class Bullet{
   
   void update(){
     if(firing){
-      x += cos(rotation) * speed;
+      x += cos(rotation) * speed;//updates x and y coordinates with the rotation it was given 
       y += sin(rotation) * speed;
       if(x > 600 || x < 0 || y > height || y < 0){
        firing = false; 
@@ -40,6 +40,8 @@ class Bullet{
    return firing; 
   }
   
+  
+  //returns true if bullet is touching any of the balloons on screen 
   boolean touching(Balloon other) {
     float xcor = other.getxcor(); 
     float ycor = other.getycor(); 

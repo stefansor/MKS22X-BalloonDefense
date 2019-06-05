@@ -20,7 +20,7 @@ class Catapult extends Tools{
   void update(){
    for(int i = 0; i < bullets.size(); i++){
     if(!bullets.get(i).isOnMap()){
-      bullets.remove(i);
+      bullets.remove(i); //bullets no longer on map no longer get updated
       i--;
     }
    }
@@ -52,9 +52,7 @@ class Catapult extends Tools{
    lives--; 
   }
   
-  PImage getImage(){
-   return img; 
-  }
+
   
   float getX(){
    return x; 

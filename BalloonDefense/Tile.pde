@@ -23,8 +23,8 @@ class Tile{
       }
       
       boolean isTowerable(){
-       return towerable; 
-      }
+       return towerable; //determines if the tile can have a catapult 
+      } // if returns false demonstrates tile is part of balloon path and tiles/bombs can be placed
       
       void setTowerable(boolean s){
        towerable = s;
